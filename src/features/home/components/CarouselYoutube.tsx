@@ -38,10 +38,9 @@ const MyCarousel = () => {
                 layoutCardOffset={9}
                 data={DATA}
                 renderItem={({item}) => <CarouselItem {...item} />}
-                sliderWidth={width}
-                itemWidth={width - 20}
-                sliderHeight={height}
-                itemHeight={height}
+                sliderWidth={width - 30}
+                itemWidth={width - 40}
+                itemHeight={40}
                 inactiveSlideScale={0.9}
                 inactiveSlideOpacity={0.7}
                 containerCustomStyle={styles.carousel}
@@ -59,7 +58,10 @@ const MyCarousel = () => {
 
 const styles = StyleSheet.create({
     mainContainer: {
-        flex: 1,
+        width: '100%',
+        height: 220,
+        // borderColor: 'red',
+        // borderWidth: 2,
     },
     item: {
         width: '100%',

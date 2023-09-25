@@ -1,31 +1,25 @@
 //import useHomeController from '../view-controller/useHomeController';
 import {
     useYoutubeCarouselStore,
-    YoutubeCarousel,
+    YoutubeCarouselItem,
 } from '../store/YoutubeCarouselStore';
+import {isNetworkAvailable} from 'utils/networkState';
+import {useNetworkStatus} from '../../../services/NetworkStatusService';
 const useHomeViewModel = () => {
     //const homeController = useHomeController();
-    const {youtubeCarousel, isLoading, toggleIsLoading, addYoutubeCarousel} =
-        useYoutubeCarouselStore();
-    const setLoadingFalse = () => {
-        toggleIsLoading();
-    };
-
-    const addDataToCarousel = () => {
-        const data: YoutubeCarousel = {
-            thumbnailUrl: 'gg',
-            title: 'lmao',
-            url: 'gg',
-        };
-
-        addYoutubeCarousel(data);
-    };
+    const {
+        youtubeCarousel,
+        isLoading,
+        isError,
+        toggleIsLoading,
+        fetchYoutubeCarousel,
+    } = useYoutubeCarouselStore();
 
     return {
         youtubeCarousel,
         isLoading,
-        setLoadingFalse,
-        addDataToCarousel,
+        isError,
+        fetchYoutubeCarousel,
     };
 };
 

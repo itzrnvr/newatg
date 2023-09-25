@@ -1,21 +1,26 @@
 import {create} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
-import axios from 'axios';
 import zustandStorage from '../../../utils/zustandStorage';
+import {fetchYoutubeSlidesFromNetwork} from '../services/homeApiService';
+import {isNetworkAvailable} from 'utils/networkState';
 
-export type YoutubeCarousel = {
-    thumbnailUrl: string;
-    title: string;
-    url: string;
-};
+export interface YoutubeCarouselItem {
+    pkey: string;
+    video_title: string;
+    video_ytube_link: string;
+    thumbnail: string;
+    status: string;
+    deleted: string;
+    created: null | string;
+    updated: null | string;
+}
 
 export type State = {
-    youtubeCarousel: YoutubeCarousel[];
+    youtubeCarousel: YoutubeCarouselItem[];
     isLoading: boolean;
+    isError: Error | null;
 
     toggleIsLoading: () => void;
-    addYoutubeCarousel: (data: YoutubeCarousel) => void;
-    updateYoutubeCarousel: (data: YoutubeCarousel[]) => void;
     fetchYoutubeCarousel: () => Promise<void>;
 };
 
@@ -24,27 +29,39 @@ export const useYoutubeCarouselStore = create(
         set => ({
             youtubeCarousel: [],
             isLoading: true,
+            isError: null,
 
             toggleIsLoading: () => {
                 set(state => ({isLoading: !state.isLoading}));
             },
-            addYoutubeCarousel: (data: YoutubeCarousel) => {
-                set(state => ({
-                    youtubeCarousel: [...state.youtubeCarousel, data],
-                }));
-            },
-            updateYoutubeCarousel: (data: YoutubeCarousel[]) => {
-                set({youtubeCarousel: data});
-            },
             fetchYoutubeCarousel: async () => {
-                try {
-                    const response = await axios.get(
-                        'api/to/fetch/YoutubeCarousel',
-                    );
-                    set({youtubeCarousel: response.data});
-                } catch (error) {
-                    console.error('Failed fetching YoutubeCarousel: ', error);
-                }
+                set(() => ({isLoading: true})); // Start loading
+                isNetworkAvailable
+                    .yes(() => {
+                        console.log('fetchYoutubeCarouselItems', 'CONNECTED');
+                        fetchYoutubeSlidesFromNetwork()
+                            .success(response => {
+                                console.log(response);
+                                set({
+                                    youtubeCarousel: response,
+                                    isLoading: false,
+                                }); // Stop loading when data is fetched
+                            })
+                            .error(error => {
+                                set({isLoading: false});
+                                set({isError: Error(error.error)});
+                                set({isError: null});
+                                console.log(
+                                    'Failed fetching YoutubeCarousel: ',
+                                    error,
+                                );
+                            });
+                    })
+                    .no(() => {
+                        set({isLoading: false});
+                        set({isError: Error('Please check your network')});
+                        set({isError: null});
+                    });
             },
         }),
         {
