@@ -7,7 +7,6 @@ import {
     TouchableNativeFeedback,
 } from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
-import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
 
 const DATA = [
     {id: '1', backgroundColor: 'tomato'},
@@ -19,47 +18,33 @@ const DATA = [
 const {width, height} = Dimensions.get('window');
 
 interface CarouselItem {
-    item: YoutubeCarouselItem;
+    title: string;
 }
-
-const CarouselItem: FC<CarouselItem> = ({item}) => (
+const CarouselItem: FC<CarouselItem> = ({title}) => (
     <TouchableNativeFeedback>
         <View
             className={
                 'bg-[#B79FFE] h-full rounded-[12px] justify-center items-center'
             }>
-            <Text>{item.video_title}</Text>
+            <Text>{title}</Text>
         </View>
     </TouchableNativeFeedback>
 );
 
-interface YoutubeCarouselPropTypes {
-    carouselData: YoutubeCarouselItem[];
-}
+// interface YoutubeCarouselPropTypes {
+//     carouselData: YoutubeCarouselItem[];
+// }
 
-const YoutubeCarousel: FC<YoutubeCarouselPropTypes> = ({carouselData = []}) => {
+const CarouselKeys = () => {
     const [activeSlide, setActiveSlide] = useState(0);
 
-    const renderPagination = () => {
-        return (
-            <Pagination
-                dotsLength={carouselData.length}
-                activeDotIndex={activeSlide}
-                containerStyle={styles.paginationContainer}
-                dotStyle={styles.paginationDot}
-                inactiveDotOpacity={0.4}
-                inactiveDotScale={0.6}
-            />
-        );
-    };
-
     return (
-        <View className={'mt-5'} style={styles.mainContainer}>
+        <View className={'mt-4'} style={styles.mainContainer}>
             <Carousel
                 layout={'default'}
                 layoutCardOffset={9}
-                data={carouselData}
-                renderItem={({item}) => <CarouselItem item={item} />}
+                data={DATA}
+                renderItem={({item}) => <CarouselItem title={item.id} />}
                 sliderWidth={width - 28}
                 itemWidth={width - 28}
                 itemHeight={40}
@@ -73,17 +58,16 @@ const YoutubeCarousel: FC<YoutubeCarouselPropTypes> = ({carouselData = []}) => {
                 decelerationRate={0.25}
                 onSnapToItem={index => setActiveSlide(index)}
             />
-            {renderPagination()}
         </View>
     );
 };
 
-export default YoutubeCarousel;
+export default CarouselKeys;
 
 const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',
-        height: 220,
+        height: 96,
         // borderColor: 'red',
         // borderWidth: 2,
     },

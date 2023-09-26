@@ -1,37 +1,47 @@
-import React, {useState} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import React, {FC} from 'react';
+import {Text, FlatList} from 'react-native';
+import CarouselYoutube from './CarouselYoutube';
+import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
+import Header from './Header';
+import CarouselKeys from './CarouselKeys';
+import GridHomeAction from './GridHomeAction';
 
-const HomeComponentList = () => {
-    const [data, setData] = useState([
-        {id: 'data1', type: 'type1'},
-        {id: 'data2', type: 'type2'},
-        {id: 'data3', type: 'type1'},
-        //...any other data
-    ]);
+export type ListHomeItem = {
+    type: 'header' | 'carousel' | 'keysCarousel' | 'grid';
+    id: string;
+    data?: YoutubeCarouselItem[];
+};
 
-    const renderItem = ({item}) => {
-        if (item.type === 'type1') {
-            return (
-                <View>
-                    <Text>This is type1 View</Text>
-                </View>
-            );
-        } else if (item.type === 'type2') {
-            return (
-                <View>
-                    <Text>This is type2 View</Text>
-                </View>
-            );
+type ListHomeProps = {
+    componentsToRender: ListHomeItem[];
+};
+
+export function ListHome({componentsToRender}: ListHomeProps) {
+    const renderItem = ({item}: {item: ListHomeItem}) => {
+        switch (item.type) {
+            case 'header':
+                return <Header />;
+            case 'carousel':
+                return (
+                    <CarouselYoutube
+                        carouselData={item.data as YoutubeCarouselItem[]}
+                    />
+                );
+            case 'keysCarousel':
+                return <CarouselKeys />;
+
+            case 'grid':
+                return <GridHomeAction />;
+            default:
+                return null;
         }
     };
 
     return (
         <FlatList
-            data={data}
-            keyExtractor={item => item.id}
+            data={componentsToRender}
             renderItem={renderItem}
+            keyExtractor={item => item.id}
         />
     );
-};
-
-export default HomeComponentList;
+}

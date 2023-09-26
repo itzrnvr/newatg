@@ -1,13 +1,35 @@
 import {ScreenContainer} from '../../layouts/ScreenContainer';
-import {Button, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import {Button, StatusBar, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import useHomeViewModel from '../../features/home/view-model/useHomeViewModel';
 import YoutubeCarousel from '../../features/home/components/CarouselYoutube';
 // import HomeComponentList from '../../features/home/components/ListHome';
 import Toast from 'react-native-toast-message';
+import {ListHome, ListHomeItem} from '../../features/home/components/ListHome';
+
+// Define the list of components to render
+const componentsToRender: ListHomeItem[] = [
+    {type: 'header', id: 'comp-header'},
+    {
+        type: 'carousel',
+        id: 'comp-carousel',
+        data: [
+            // Add rest of carousel items here
+        ],
+    },
+    {
+        type: 'keysCarousel',
+        id: 'comp-keys-carousel',
+    },
+    {
+        type: 'grid',
+        id: 'comp-grid',
+    },
+];
 
 export const Home = () => {
     const viewModel = useHomeViewModel();
+    const [listHomeItems, setListHomeItems] = useState(componentsToRender);
 
     const showToast = () => {
         Toast.show({
@@ -22,29 +44,21 @@ export const Home = () => {
     }, []);
 
     useEffect(() => {
+        componentsToRender[1].data = viewModel.youtubeCarousel;
+        setListHomeItems(componentsToRender);
+
         if (viewModel.isError) {
             console.log(viewModel.isError?.message);
             showToast();
         }
-    }, [viewModel.isError]);
+    }, [viewModel.youtubeCarousel, viewModel.isError]);
 
     return (
-        <ScreenContainer loading={viewModel.isLoading}>
-            <View className="p-3 bg-amber-400 h-full">
-                {viewModel.youtubeCarousel.map((youtubeCarousel, index) => (
-                    <Text key={index} className={'text-slate-950'}>
-                        {youtubeCarousel.video_title}
-                    </Text>
-                ))}
-                {/*<HomeComponentList />*/}
-                <YoutubeCarousel />
-
-                <View className={''}>
-                    <Button
-                        title={'Click me'}
-                        onPress={() => viewModel.fetchYoutubeCarousel()}
-                    />
-                </View>
+        <ScreenContainer
+            loading={viewModel.isLoading}
+            statusBarBackgroundColor={'#f8f7f4'}>
+            <View className="p-3 bg-[#f8f7f4] h-full">
+                <ListHome componentsToRender={listHomeItems} />
             </View>
         </ScreenContainer>
     );

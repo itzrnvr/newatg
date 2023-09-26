@@ -1,25 +1,28 @@
 import React, {ReactNode} from 'react';
-import {
-    SafeAreaView,
-    View,
-    StyleSheet,
-    ActivityIndicator,
-    Modal,
-} from 'react-native';
+import {SafeAreaView, StatusBar, StatusBarStyle, View} from 'react-native';
+import LoadingModal from '../components/LoadingModal';
 
 interface ScreenContainerProps {
     safeAreaViewEnabled?: boolean;
     loading?: boolean;
     children: ReactNode;
+    statusBarBackgroundColor?: string;
+    statusBarStyle?: StatusBarStyle;
 }
 
 export const ScreenContainer: React.FC<ScreenContainerProps> = ({
     children,
     safeAreaViewEnabled = true,
     loading = false,
+    statusBarBackgroundColor = '#ffffff',
+    statusBarStyle = 'dark-content',
 }) => {
     return (
         <>
+            <StatusBar
+                backgroundColor={statusBarBackgroundColor}
+                barStyle={statusBarStyle}
+            />
             {!loading &&
                 (safeAreaViewEnabled ? (
                     <SafeAreaView className="h-full">{children}</SafeAreaView>
@@ -30,37 +33,3 @@ export const ScreenContainer: React.FC<ScreenContainerProps> = ({
         </>
     );
 };
-
-type LoadingModalProps = {
-    isLoading: boolean;
-};
-
-const LoadingModal = ({isLoading}: LoadingModalProps) => (
-    <Modal
-        transparent={true}
-        animationType={'none'}
-        visible={isLoading}
-        onRequestClose={() => console.log('close modal')}>
-        <View className={'h-full justify-center items-center bg-white'}>
-            <View style={styles.activityIndicatorWrapper}>
-                <ActivityIndicator
-                    animating={true}
-                    size="large"
-                    color="#0000ff"
-                />
-            </View>
-        </View>
-    </Modal>
-);
-
-const styles = StyleSheet.create({
-    activityIndicatorWrapper: {
-        backgroundColor: '#FFFFFF',
-        height: 100,
-        width: 100,
-        borderRadius: 10,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-    },
-});
