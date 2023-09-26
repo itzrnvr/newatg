@@ -1,12 +1,7 @@
 import React, {FC, useState} from 'react';
-import {
-    View,
-    Dimensions,
-    StyleSheet,
-    Text,
-    TouchableNativeFeedback,
-} from 'react-native';
-import Carousel, {Pagination} from 'react-native-snap-carousel';
+import {View, Dimensions, StyleSheet, Text} from 'react-native';
+import {TouchableNativeFeedback} from 'react-native-gesture-handler';
+import Carousel from 'react-native-snap-carousel';
 
 const DATA = [
     {id: '1', backgroundColor: 'tomato'},
@@ -36,8 +31,6 @@ const CarouselItem: FC<CarouselItem> = ({title}) => (
 // }
 
 const CarouselKeys = () => {
-    const [activeSlide, setActiveSlide] = useState(0);
-
     return (
         <View className={'mt-4'} style={styles.mainContainer}>
             <Carousel
@@ -56,7 +49,6 @@ const CarouselKeys = () => {
                 lockScrollWhileSnapping={true}
                 enableMomentum={false}
                 decelerationRate={0.25}
-                onSnapToItem={index => setActiveSlide(index)}
             />
         </View>
     );

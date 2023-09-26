@@ -1,13 +1,10 @@
 import React, {FC, useState} from 'react';
-import {
-    View,
-    Dimensions,
-    StyleSheet,
-    Text,
-    TouchableNativeFeedback,
-} from 'react-native';
+import {View, Dimensions, StyleSheet, Text, Image} from 'react-native';
+import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
+import Toast from 'react-native-toast-message';
+import Icon from 'react-native-vector-icons/FontAwesome6';
 
 const DATA = [
     {id: '1', backgroundColor: 'tomato'},
@@ -22,13 +19,41 @@ interface CarouselItem {
     item: YoutubeCarouselItem;
 }
 
+const showToast = () => {
+    Toast.show({
+        type: 'success',
+        text1: 'TAPPED',
+        text2: 'Tapped',
+    });
+};
+
 const CarouselItem: FC<CarouselItem> = ({item}) => (
-    <TouchableNativeFeedback>
+    <TouchableNativeFeedback onPress={() => showToast()}>
         <View
             className={
-                'bg-[#B79FFE] h-full rounded-[12px] justify-center items-center'
+                'p-[0.5px] relative bg-[#B79FFE] h-full rounded-[12px] justify-center items-center'
             }>
-            <Text>{item.video_title}</Text>
+            <Image
+                className={
+                    'h-full w-full rounded-[12px]'
+                }
+                source={require('../../../assets/youtube_thumbnailex.png')}
+            />
+
+            {/*<Text>{item.video_title}</Text>*/}
+
+            <View
+                className={
+                    'bg-gray-700 h-full opacity-[0.1] rounded-[12px] w-full absolute bottom-0'
+                }
+            />
+
+            <View
+                className={
+                    'bg-indigo-400 justify-center items-center h-14 w-14 rounded-full absolute bottom-5 right-8'
+                }>
+                <Icon name="play" size={24} color="#ffffff" />
+            </View>
         </View>
     </TouchableNativeFeedback>
 );
@@ -83,7 +108,7 @@ export default YoutubeCarousel;
 const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',
-        height: 220,
+        height: 230,
         // borderColor: 'red',
         // borderWidth: 2,
     },
