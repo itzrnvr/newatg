@@ -6,10 +6,11 @@ import Header from './Header';
 import CarouselKeys from './CarouselKeys';
 import GridHomeAction from './GridHomeAction';
 import {RefreshControl} from 'react-native';
-import {wait} from "utils/misc";
+import {wait} from 'utils/misc';
+import MidSectionImage from './MidSectionImage';
 
 export type ListHomeItem = {
-    type: 'header' | 'carousel' | 'keysCarousel' | 'grid';
+    type: 'header' | 'carousel' | 'midSectionImage' | 'keysCarousel' | 'grid';
     id: string;
     data?: YoutubeCarouselItem[];
 };
@@ -37,6 +38,10 @@ export function ListHome({componentsToRender}: ListHomeProps) {
                         carouselData={item.data as YoutubeCarouselItem[]}
                     />
                 );
+
+            case 'midSectionImage':
+                return <MidSectionImage />;
+
             case 'keysCarousel':
                 return <CarouselKeys />;
 

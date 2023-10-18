@@ -17,9 +17,10 @@ const componentsToRender: ListHomeItem[] = [
             // Add rest of carousel items here
         ],
     },
+
     {
-        type: 'keysCarousel',
-        id: 'comp-keys-carousel',
+        type: 'midSectionImage',
+        id: 'comp-midSectionImage',
     },
     {
         type: 'grid',
@@ -56,8 +57,8 @@ export const Home = () => {
     return (
         <ScreenContainer
             loading={viewModel.isLoading}
-            statusBarBackgroundColor={'#f8f7f4'}>
-            <View className="p-3 bg-[#f8f7f4] h-full">
+            statusBarBackgroundColor={'#ffffff'}>
+            <View className="h-full bg-white">
                 <ListHome componentsToRender={listHomeItems} />
             </View>
         </ScreenContainer>

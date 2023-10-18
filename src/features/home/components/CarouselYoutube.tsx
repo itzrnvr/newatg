@@ -4,7 +4,7 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
 import Toast from 'react-native-toast-message';
-import Icon from 'react-native-vector-icons/FontAwesome6';
+import Icon from 'react-native-remix-icon';
 
 const DATA = [
     {id: '1', backgroundColor: 'tomato'},
@@ -29,31 +29,18 @@ const showToast = () => {
 
 const CarouselItem: FC<CarouselItem> = ({item}) => (
     <TouchableNativeFeedback onPress={() => showToast()}>
-        <View
-            className={
-                'p-[0.5px] relative bg-[#B79FFE] h-full rounded-[12px] justify-center items-center'
-            }>
+        <View className={'items-center'}>
             <Image
-                className={
-                    'h-full w-full rounded-[12px]'
-                }
-                source={require('../../../assets/youtube_thumbnailex.png')}
+                style={{resizeMode: 'cover'}}
+                className={'h-[200] w-full rounded-[12px]'}
+                source={require('../../../assets/youtube.png')}
             />
 
-            {/*<Text>{item.video_title}</Text>*/}
-
-            <View
-                className={
-                    'bg-gray-700 h-full opacity-[0.1] rounded-[12px] w-full absolute bottom-0'
-                }
-            />
-
-            <View
-                className={
-                    'bg-indigo-400 justify-center items-center h-14 w-14 rounded-full absolute bottom-5 right-8'
-                }>
-                <Icon name="play" size={24} color="#ffffff" />
-            </View>
+            <Text
+                className={'mt-3.5 text-lg text-slate-950 '}
+                style={{fontFamily: 'Roboto-Regular'}}>
+                Mind Maps- Higher Level
+            </Text>
         </View>
     </TouchableNativeFeedback>
 );
@@ -79,7 +66,16 @@ const YoutubeCarousel: FC<YoutubeCarouselPropTypes> = ({carouselData = []}) => {
     };
 
     return (
-        <View className={'mt-5'} style={styles.mainContainer}>
+        <View className={'px-3 mt-8 h-[300px]'} style={styles.mainContainer}>
+            <View className={'mb-2 flex-row items-center'}>
+                <Icon name="youtube-fill" size="38" color="red" />
+                <Text
+                    className={'ml-1.5 text-[18px] text-slate-950'}
+                    style={{fontFamily: 'Roboto-Regular'}}>
+                    Checkout Our Youtube
+                </Text>
+            </View>
+
             <Carousel
                 layout={'default'}
                 layoutCardOffset={9}
@@ -98,7 +94,6 @@ const YoutubeCarousel: FC<YoutubeCarouselPropTypes> = ({carouselData = []}) => {
                 decelerationRate={0.25}
                 onSnapToItem={index => setActiveSlide(index)}
             />
-            {renderPagination()}
         </View>
     );
 };
@@ -108,7 +103,6 @@ export default YoutubeCarousel;
 const styles = StyleSheet.create({
     mainContainer: {
         width: '100%',
-        height: 230,
         // borderColor: 'red',
         // borderWidth: 2,
     },
@@ -119,7 +113,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     carousel: {
-        flex: 1,
+        height: 190,
     },
     paginationContainer: {
         paddingVertical: 8,
