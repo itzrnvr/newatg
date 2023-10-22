@@ -11,8 +11,12 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 // TypeScript Interface for Props
 interface PrimaryButtonProps {
     onPress: (() => void) | (() => Promise<any>);
+    currentLoading: boolean;
 }
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({onPress}) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({
+    onPress,
+    currentLoading,
+}) => {
     const [loading, setLoading] = useState(false);
 
     const onButtonPress = async () => {
@@ -30,7 +34,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({onPress}) => {
                 className={
                     'py-4 bg-blue-500 rounded-lg justify-center items-center'
                 }>
-                {loading ? (
+                {loading || currentLoading ? (
                     <ActivityIndicator size={30} color={'#ffffff'} />
                 ) : (
                     <Text className={'text-white text-lg'}>Activate</Text>

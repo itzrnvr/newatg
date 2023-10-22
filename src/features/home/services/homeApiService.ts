@@ -1,12 +1,12 @@
 import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
+import {getVideoSlider} from 'utils/Constants';
 
-const BASE_URL =
-    'https://junglebookpune.org/test_awaken_genius/webserv/webserv_mobile_react';
 
-interface APIResponse<T> {
+export interface APIResponse<T> {
     success: (callback: (items: T[]) => void) => APIResponse<T>;
     error: (callback: (error: any) => void) => APIResponse<T>;
 }
+
 
 export const fetchYoutubeSlidesFromNetwork =
     (): APIResponse<YoutubeCarouselItem> => {
@@ -28,7 +28,7 @@ export const fetchYoutubeSlidesFromNetwork =
             },
         };
 
-        fetch(`${BASE_URL}/get_video_slider`)
+        fetch(getVideoSlider)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);

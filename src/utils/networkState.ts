@@ -1,34 +1,36 @@
 import NetInfo from '@react-native-community/netinfo';
 
 class NetworkUtils {
-    private isConnected: boolean | null = null;
+    private isConnected: boolean = false;
 
     constructor() {
-        (async () => {
-            const response = await NetInfo.fetch();
-            this.isConnected = response?.isConnected || null;
-        })();
+        this.init();
     }
 
-    yes(callback: () => void): NetworkUtils {
-        setTimeout(() => {
-            // Used to allow network status fetch to complete
-            if (this.isConnected) {
-                callback();
-            }
-        }, 1000); // Delay might need to be adjusted based on your needs and network speed
+    private async init() {
+        const state = await NetInfo.fetch();
+        this.isConnected = state.isConnected || false;
+        // Subscribe to network state changes
+        NetInfo.addEventListener(state => {
+            this.isConnected = state.isConnected || false;
+        });
+    }
+
+    public yes(callback: () => void): NetworkUtils {
+        if (this.isConnected) {
+            callback();
+        }
         return this;
     }
 
-    no(callback: () => void): NetworkUtils {
-        setTimeout(() => {
-            // Used to allow network status fetch to complete
-            if (!this.isConnected) {
-                callback();
-            }
-        }, 1000); // Delay might need to be adjusted based on your needs and network speed
+    public no(callback: () => void): NetworkUtils {
+        if (!this.isConnected) {
+            callback();
+        }
         return this;
     }
 }
+
+export default new NetworkUtils();
 
 export const isNetworkAvailable = new NetworkUtils(); // Returns instance of NetworkUtils directly
