@@ -18,7 +18,7 @@ const data: GridHomeActionItem[] = [
         key: 'My Packages',
         asset: require(`../../../assets/mypackages.png`),
         url: null,
-        screen: 'ActivateKeys',
+        screen: 'MyPackages',
     },
     {
         id: 1,

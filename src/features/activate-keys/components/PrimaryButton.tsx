@@ -31,7 +31,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({onPress}) => {
                     'py-4 bg-blue-500 rounded-lg justify-center items-center'
                 }>
                 {loading ? (
-                    <ActivityIndicator size={28} color={'#ffffff'} />
+                    <ActivityIndicator size={30} color={'#ffffff'} />
                 ) : (
                     <Text className={'text-white text-lg'}>Activate</Text>
                 )}

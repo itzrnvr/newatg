@@ -5,10 +5,12 @@ import Toast from 'react-native-toast-message';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ActivateKeys from './src/screens/activate-keys/ActivateKeys';
+import MyPackages from "./src/screens/myPackages/MyPackages";
 
 export type StackParamList = {
     Home: undefined;
     ActivateKeys: undefined;
+    MyPackages: undefined;
 };
 
 const App = () => {
@@ -27,6 +29,7 @@ const App = () => {
                         name="ActivateKeys"
                         component={ActivateKeys}
                     />
+                    <Stack.Screen name="MyPackages" component={MyPackages} />
                 </Stack.Navigator>
             </NavigationContainer>
             <Toast />

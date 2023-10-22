@@ -32,10 +32,10 @@ function ActivateKeys() {
                 <TouchableNativeFeedback>
                     <Image
                         style={{
-                            height: 255,
+                            height: 224,
                             width: windowWidth,
                         }}
-                        resizeMode={'cover'}
+                        resizeMode={'contain'}
                         source={require('../../assets/validatekeys.png')}
                     />
                 </TouchableNativeFeedback>
@@ -51,7 +51,7 @@ function ActivateKeys() {
                         placeholder={'xxxxxxxxxxxxxxxxxxxxxx'}
                         autoFocus={true}
                         className={
-                            'mt-4 px-4 h-16 bo border-2 rounded-xl border-zinc-700'
+                            'mt-4 px-4 h-14 bo border-2 rounded-xl border-zinc-700'
                         }
                     />
                     <View className={'mt-8'}>
