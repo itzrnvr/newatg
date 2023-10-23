@@ -1,24 +1,25 @@
 import {getSerailKeyStatus} from 'utils/Constants';
 import axios from 'axios';
+import {APIResponse} from '../../my-packages/services/myPackagesApiService';
 
-export interface APIResponseKeyStatus {
-    success: (callback: () => void) => APIResponseKeyStatus;
-    error: (callback: (error: any) => void) => APIResponseKeyStatus;
-}
+// export interface APIResponseKeyStatus {
+//     success: (callback: () => void) => APIResponseKeyStatus;
+//     error: (callback: (error: any) => void) => APIResponseKeyStatus;
+// }
 
 export const fetchKeyStatus = (
     serialKey: string,
     macId: string,
-): APIResponseKeyStatus => {
-    let successCallback: () => void = () => {};
+): APIResponse<any> => {
+    let successCallback: (data: null) => void = () => {};
     let errorCallback: (error: any) => void = () => {};
 
-    const result: APIResponseKeyStatus = {
-        error(callback: (error: any) => void): APIResponseKeyStatus {
+    const result: APIResponse<any> = {
+        error(callback: (error: any) => void): APIResponse<any> {
             errorCallback = callback;
             return result;
         },
-        success(callback: () => void): APIResponseKeyStatus {
+        success(callback: (data: null) => void): APIResponse<any> {
             successCallback = callback;
             return result;
         },
@@ -38,7 +39,7 @@ export const fetchKeyStatus = (
                 response.data.response === 200
             ) {
                 console.log(response.data);
-                successCallback();
+                successCallback(null);
             } else {
                 console.log('Error');
                 throw new Error(`HTTP error! status: ${response.data.status}`);

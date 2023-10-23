@@ -2,9 +2,10 @@ import NetInfo from '@react-native-community/netinfo';
 
 class NetworkUtils {
     private isConnected: boolean = false;
+    private initPromise: Promise<void>;
 
     constructor() {
-        this.init();
+        this.initPromise = this.init();
     }
 
     private async init() {
@@ -16,17 +17,21 @@ class NetworkUtils {
         });
     }
 
-    public yes(callback: () => void): NetworkUtils {
-        if (this.isConnected) {
-            callback();
-        }
+    public yes(callback: () => void) {
+        this.initPromise.then(() => {
+            if (this.isConnected) {
+                callback();
+            }
+        });
         return this;
     }
 
-    public no(callback: () => void): NetworkUtils {
-        if (!this.isConnected) {
-            callback();
-        }
+    public no(callback: () => void) {
+        this.initPromise.then(() => {
+            if (!this.isConnected) {
+                callback();
+            }
+        });
         return this;
     }
 }

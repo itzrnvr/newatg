@@ -20,7 +20,6 @@ export type State = {
     isLoading: boolean;
     isError: Error | null;
 
-    toggleIsLoading: () => void;
     fetchYoutubeCarousel: () => Promise<void>;
 };
 
@@ -31,11 +30,8 @@ export const useYoutubeCarouselStore = create(
             isLoading: true,
             isError: null,
 
-            toggleIsLoading: () => {
-                set(state => ({isLoading: !state.isLoading}));
-            },
             fetchYoutubeCarousel: async () => {
-                set(() => ({isLoading: true})); // Start loading
+                set({isError: null, isLoading: true});
                 isNetworkAvailable
                     .yes(() => {
                         console.log('fetchYoutubeCarouselItems', 'CONNECTED');
@@ -49,8 +45,7 @@ export const useYoutubeCarouselStore = create(
                             })
                             .error(error => {
                                 set({isLoading: false});
-                                set({isError: Error(error.error)});
-                                set({isError: null});
+                                set({isError: Error(error.message)});
                                 console.log(
                                     'Failed fetching YoutubeCarousel: ',
                                     error,
@@ -60,7 +55,6 @@ export const useYoutubeCarouselStore = create(
                     .no(() => {
                         set({isLoading: false});
                         set({isError: Error('Please check your network')});
-                        set({isError: null});
                     });
             },
         }),

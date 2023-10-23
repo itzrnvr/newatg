@@ -75,7 +75,8 @@ function ActivateKeys() {
                     </Text>
 
                     <TextInput
-                        placeholder={'xxxxxxxxxxxxxxxxxxxxxx'}
+                        placeholder={'paste the key here...'}
+                        placeholderTextColor={'#545454'}
                         autoFocus={true}
                         value={viewModel.serialKey}
                         onChangeText={text => viewModel.setSerialKey(text)}

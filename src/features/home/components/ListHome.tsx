@@ -17,14 +17,15 @@ export type ListHomeItem = {
 
 type ListHomeProps = {
     componentsToRender: ListHomeItem[];
+    onRefresh: () => Promise<void>;
 };
 
-export function ListHome({componentsToRender}: ListHomeProps) {
+export function ListHome({componentsToRender, onRefresh}: ListHomeProps) {
     const [isRefreshing, setIsRefreshing] = useState(false);
 
     const requestRefresh = async () => {
         setIsRefreshing(true);
-        await wait(500);
+        await onRefresh();
         setIsRefreshing(false);
     };
 

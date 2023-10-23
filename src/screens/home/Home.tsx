@@ -6,6 +6,7 @@ import YoutubeCarousel from '../../features/home/components/CarouselYoutube';
 // import HomeComponentList from '../../features/home/components/ListHome';
 import Toast from 'react-native-toast-message';
 import {ListHome, ListHomeItem} from '../../features/home/components/ListHome';
+import {wait} from 'utils/misc';
 
 // Define the list of components to render
 const componentsToRender: ListHomeItem[] = [
@@ -32,11 +33,22 @@ export const Home = () => {
     const viewModel = useHomeViewModel();
     const [listHomeItems, setListHomeItems] = useState(componentsToRender);
 
-    const showToast = () => {
+    const successToast = () => {
         Toast.show({
-            type: 'error',
+            type: 'success',
             text1: 'Error',
             text2: 'Something went wrong! :(',
+        });
+    };
+
+    const errorToast = (
+        title: string = 'Something went wrong',
+        message: string = 'There seems to be a problem',
+    ) => {
+        Toast.show({
+            type: 'error',
+            text1: title,
+            text2: message,
         });
     };
 
@@ -50,7 +62,7 @@ export const Home = () => {
 
         if (viewModel.isError) {
             console.log(viewModel.isError?.message);
-            showToast();
+            errorToast('Something went wrong!', viewModel.isError?.message);
         }
     }, [viewModel.youtubeCarousel, viewModel.isError]);
 
@@ -58,8 +70,12 @@ export const Home = () => {
         <ScreenContainer
             loading={viewModel.isLoading}
             statusBarBackgroundColor={'#ffffff'}>
-            <View className="h-full bg-white">
-                <ListHome componentsToRender={listHomeItems} />
+            <View className="h-full bg-white items-center justify-center">
+                {viewModel.isError && <Text className={'text-black'}>Pull down to refresh...</Text>}
+                <ListHome
+                    componentsToRender={listHomeItems}
+                    onRefresh={() => viewModel.fetchYoutubeCarousel()}
+                />
             </View>
         </ScreenContainer>
     );

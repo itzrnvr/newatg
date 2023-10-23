@@ -1,6 +1,7 @@
 import {create} from 'zustand';
 import {isNetworkAvailable} from 'utils/networkState';
 import {fetchKeyStatus} from '../services/activateKeysApiService';
+import {getMacID} from '../../../services/SessionManagerService';
 
 type Store = {
     success: boolean;
@@ -27,9 +28,10 @@ export const useActivateKeyStore = create<Store>((set, get) => ({
 
         set({loading: true}); // Start loading
         isNetworkAvailable
-            .yes(() => {
+            .yes(async () => {
                 console.log('fetchKeyStatus', 'CONNECTED');
-                fetchKeyStatus(get().serialKey, '')
+                console.log('mac_id', await getMacID());
+                fetchKeyStatus(get().serialKey, await getMacID())
                     .success(() => {
                         console.log('fetch key success');
                         set({
