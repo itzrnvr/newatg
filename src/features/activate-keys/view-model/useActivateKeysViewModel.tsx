@@ -1,7 +1,7 @@
 import {useActivateKeyStore} from '../store/activateKeyStore';
 
 const useActivateKeysViewModel = () => {
-    const {loading, serialKey, setSerialKey, submitKey, error, success} =
+    const {loading, serialKey, setSerialKey, submitKey, error, resetError, success} =
         useActivateKeyStore();
 
     return {
@@ -10,6 +10,7 @@ const useActivateKeysViewModel = () => {
         setSerialKey,
         submitKey,
         error,
+        resetError,
         success,
     };
 };

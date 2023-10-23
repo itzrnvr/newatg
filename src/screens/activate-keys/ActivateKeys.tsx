@@ -45,7 +45,9 @@ function ActivateKeys() {
 
     useEffect(() => {
         if (viewModel.error) {
+            console.log(viewModel.error);
             errorToast('Error', viewModel.error?.message);
+            viewModel.resetError();
         }
 
         if (viewModel.success) {
@@ -86,7 +88,7 @@ function ActivateKeys() {
                     />
                     <View className={'mt-8'}>
                         <PrimaryButton
-                            onPress={viewModel.submitKey}
+                            onPress={() => viewModel.submitKey()}
                             currentLoading={viewModel.loading}
                         />
                     </View>

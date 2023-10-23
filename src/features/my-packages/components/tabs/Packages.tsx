@@ -1,14 +1,17 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import usePackagesViewModel from './viewModels/usePackagesViewModel';
 import React, {useEffect} from 'react';
 import LoadingModal from '../../../../components/LoadingModal';
 import PrimaryButton from '../../../activate-keys/components/PrimaryButton';
 import Toast from 'react-native-toast-message';
 import PackagesList from '../PackagesList';
-import {wait} from 'utils/misc';
+import {VideoDetails} from '../../services/myPackagesApiService';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {StackParamList} from '../../../../../App';
 
 function PackagesScreen() {
     const viewModel = usePackagesViewModel();
+    const navigation = useNavigation<NavigationProp<StackParamList>>();
 
     const errorToast = (
         title: string = 'Something went wrong',
@@ -50,16 +53,18 @@ function PackagesScreen() {
     }
 
     return (
-        <View className={'flex-1 justify-center items-center'}>
-            <PackagesList
-                packages={viewModel.packages}
-                onRefresh={viewModel.fetchMainVideos}
-            />
-
-            <PrimaryButton
-                onPress={viewModel.fetchMainVideos}
-                currentLoading={false}
-            />
+        <View className={'h-full w-full bg-white'}>
+            <View className={'w-full'}>
+                <PackagesList
+                    onPress={(item: VideoDetails) =>
+                        navigation.navigate('VideoPlayback', {
+                            videoDetails: item,
+                        })
+                    }
+                    packages={viewModel.packages}
+                    onRefresh={viewModel.fetchMainVideos}
+                />
+            </View>
         </View>
     );
 }

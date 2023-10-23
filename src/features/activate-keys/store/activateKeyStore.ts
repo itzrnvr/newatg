@@ -10,6 +10,7 @@ type Store = {
     serialKey: string;
     setSerialKey: (key: string) => void;
     submitKey: () => void;
+    resetError: () => void;
 };
 
 export const useActivateKeyStore = create<Store>((set, get) => ({
@@ -55,5 +56,8 @@ export const useActivateKeyStore = create<Store>((set, get) => ({
                     error: Error('Please check your network'),
                 });
             });
+    },
+    resetError: () => {
+        set({error: null});
     },
 }));
