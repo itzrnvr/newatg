@@ -31,6 +31,7 @@ function PackagesScreen() {
     useEffect(() => {
         if (viewModel.error) {
             errorToast('Something went wrong!', viewModel.error?.message);
+            viewModel.resetError();
         }
     }, [viewModel.error]);
 

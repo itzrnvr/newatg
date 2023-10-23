@@ -9,13 +9,13 @@ export type State = {
     packages: Package[];
     loading: boolean;
     error: Error | null;
-
+    resetError: () => void;
     fetchMainVideos: () => void;
 };
 
 export const useMainVideosRemoteStore = create(
     persist<State>(
-        (set) => ({
+        set => ({
             packages: [],
             loading: true,
             error: null,
@@ -35,7 +35,9 @@ export const useMainVideosRemoteStore = create(
                             })
                             .error(error => {
                                 set({loading: false});
-                                set({error: Error('Failed fetching Main Videos')});
+                                set({
+                                    error: Error('Failed fetching Main Videos'),
+                                });
                                 console.log(
                                     'Failed fetching Main Videos: ',
                                     error,
@@ -46,6 +48,9 @@ export const useMainVideosRemoteStore = create(
                         set({loading: false});
                         set({error: Error('Please check your network')});
                     });
+            },
+            resetError: () => {
+                set({error: null});
             },
         }),
         {

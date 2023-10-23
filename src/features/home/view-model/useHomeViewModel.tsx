@@ -8,7 +8,7 @@ const useHomeViewModel = () => {
         youtubeCarousel,
         isLoading,
         isError,
-        toggleIsLoading,
+        resetError,
         fetchYoutubeCarousel,
     } = useYoutubeCarouselStore();
 
@@ -16,6 +16,7 @@ const useHomeViewModel = () => {
         youtubeCarousel,
         isLoading,
         isError,
+        resetError,
         fetchYoutubeCarousel,
     };
 };

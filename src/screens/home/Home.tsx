@@ -63,6 +63,7 @@ export const Home = () => {
         if (viewModel.isError) {
             console.log(viewModel.isError?.message);
             errorToast('Something went wrong!', viewModel.isError?.message);
+            viewModel.resetError();
         }
     }, [viewModel.youtubeCarousel, viewModel.isError]);
 

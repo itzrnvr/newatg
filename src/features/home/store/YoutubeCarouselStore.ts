@@ -19,7 +19,7 @@ export type State = {
     youtubeCarousel: YoutubeCarouselItem[];
     isLoading: boolean;
     isError: Error | null;
-
+    resetError: () => void;
     fetchYoutubeCarousel: () => Promise<void>;
 };
 
@@ -29,7 +29,9 @@ export const useYoutubeCarouselStore = create(
             youtubeCarousel: [],
             isLoading: true,
             isError: null,
-
+            resetError: () => {
+                set({isError: null});
+            },
             fetchYoutubeCarousel: async () => {
                 set({isError: null, isLoading: true});
                 isNetworkAvailable
