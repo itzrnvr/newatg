@@ -13,7 +13,9 @@ const VideoPlayback = ({
             <Text className={'text-black'}>{videoDetails.title}</Text>
             <Text className={'text-black'}>{videoDetails.link}</Text>
             <SecurePlayer
-                src={'https://content.jwplatform.com/manifests/yp34SRmf.m3u8'}
+                src={
+                    'https://junglebookpune.org/test_awaken_genius/videos/speed_reading/master.m3u8'
+                }
             />
         </View>
     );
