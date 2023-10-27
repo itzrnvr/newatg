@@ -8,12 +8,15 @@ import fetchVideoBitrateAndResolutions, {
     BitrateAndResolution,
 } from '../../features/video-playback/services/fetchVideoBitrateAndResolutions';
 import QualitySelectionDialog from '../../features/video-playback/components/dialog/QualitySelectionDialog';
+import {PaperProvider} from 'react-native-paper';
 
 const VideoPlayback = ({
     route,
 }: NativeStackScreenProps<StackParamList, 'VideoPlayback'>) => {
     const {videoDetails} = route.params;
     const [tracks, setTracks] = useState<BitrateAndResolution[]>();
+    const [selectedTrack, setSelectedTrack] =
+        useState<BitrateAndResolution | null>(null);
     const [dialogVisible, setDialogVisible] = useState(false);
 
     //const url = 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8';
@@ -44,19 +47,21 @@ const VideoPlayback = ({
     //'https://junglebookpune.org/test_awaken_genius/videos/speed_reading/master.m3u8'
 
     return (
-        <View className={'h-full'}>
+        <PaperProvider>
             <View className={'h-full>'}>
                 <SecurePlayer
                     src={url}
+                    currentTrack={selectedTrack}
                     onPressSettings={() => setDialogVisible(true)}
                 />
             </View>
             <QualitySelectionDialog
                 data={tracks}
                 visible={dialogVisible}
-                onSelect={item => console.log(item)}
+                hideVisible={() => setDialogVisible(false)}
+                onSelect={item => setSelectedTrack(item)}
             />
-        </View>
+        </PaperProvider>
     );
 };
 

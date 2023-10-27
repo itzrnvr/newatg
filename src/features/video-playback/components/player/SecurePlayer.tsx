@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Video, {
     LoadError,
     OnBufferData,
@@ -7,18 +7,23 @@ import Video, {
 } from 'react-native-video';
 import {View} from 'react-native';
 import SecurePlayerControls from './SecurePlayerControls';
-import * as buffer from 'buffer';
+import {BitrateAndResolution} from '../../services/fetchVideoBitrateAndResolutions';
 
 type SecurePlayerProps = {
     src: string;
+    currentTrack: BitrateAndResolution | null;
     onPressSettings: () => void;
 };
 
-const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
+const SecurePlayer: React.FC<SecurePlayerProps> = ({
+    src,
+    currentTrack,
+    onPressSettings,
+}) => {
     const [paused, setPaused] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-
+    const [buffering, setBuffering] = useState(false);
     const handleVideoProgress = (progressData: OnProgressData) => {
         setCurrentTime(progressData.currentTime);
     };
@@ -28,7 +33,8 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
     };
 
     const handleBuffer = (buffer: OnBufferData) => {
-        console.log(buffer.isBuffering);
+        console.log('Buffering: ' + buffer.isBuffering);
+        setBuffering(buffer.isBuffering);
     };
 
     const handleSliding = (value: number) => {
@@ -37,17 +43,30 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
 
     const videoPlayerRef: React.MutableRefObject<Video | null> = useRef(null);
 
-    // 740000  270 480
-    // 4830000  1080 1920
-    // 2420000  720 1280
-    // 1050000  406 720
-    // 520000  180 320
+    useEffect(() => {
+        console.log(
+            'Selected track ',
+            currentTrack?.height + ' ' + currentTrack?.bitrate,
+        );
+    }, [currentTrack]);
+
+    // Optional parameters object
+    const videoProps: Record<string, any> = {};
+
+    // Add selectedVideoTrack only when currentTrack?.height is not null
+    if (currentTrack?.height) {
+        videoProps.selectedVideoTrack = {
+            type: 'resolution',
+            value: currentTrack.height,
+        };
+    }
 
     return (
         <View className={'relative bg-black'}>
             <Video
+                {...videoProps}
                 ref={videoPlayerRef}
-                source={{uri: src}} // The video source. In this case, an HLS stream link.
+                source={{uri: src}}
                 className={'h-full w-full'}
                 resizeMode="contain"
                 paused={paused}
@@ -56,9 +75,11 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
                 onBuffer={handleBuffer}
                 onLoadStart={() => {
                     console.log('onLoadStart');
+                    setBuffering(true);
                 }}
                 onVideoLoadStart={() => {
                     console.log('onVideoStart');
+                    setBuffering(true);
                 }}
                 onVideoEnd={() => {
                     console.log('onVideoEnd');
@@ -67,6 +88,7 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
                     console.log(error);
                 }}
             />
+
             <View className={'absolute top-0 left-0 right-0 bottom-0'}>
                 <SecurePlayerControls
                     onPlay={() => setPaused(false)}
@@ -75,6 +97,7 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({src, onPressSettings}) => {
                     currentTime={currentTime}
                     duration={duration}
                     onPressSettings={onPressSettings}
+                    buffering={buffering}
                 />
             </View>
         </View>

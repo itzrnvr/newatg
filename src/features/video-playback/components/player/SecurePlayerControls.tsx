@@ -1,4 +1,5 @@
 import {
+    ActivityIndicator,
     StatusBar,
     StyleSheet,
     Text,
@@ -10,12 +11,14 @@ import TouchableIcon from '../TouchableIcon';
 import React, {useEffect, useRef, useState} from 'react';
 import Slider from '@react-native-community/slider';
 import {useNavigation} from '@react-navigation/native';
+import * as buffer from 'buffer';
 
 interface SecurePlayerControlsProps {
     onPlay: () => void;
     onPause: () => void;
     duration: number;
     currentTime: number;
+    buffering: boolean;
     onChangeProgress: (value: number) => void;
     onPressSettings: () => void;
 }
@@ -28,6 +31,7 @@ const SecurePlayerControls = ({
     currentTime,
     onChangeProgress,
     onPressSettings,
+    buffering,
 }: SecurePlayerControlsProps) => {
     let press = useRef(false);
 
@@ -38,7 +42,6 @@ const SecurePlayerControls = ({
     const [playing, setPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
     const [controlsVisible, setControlsVisible] = useState(true);
-
     const restartTimer = () => {
         if (timeoutId) clearTimeout(timeoutId);
 
@@ -112,14 +115,24 @@ const SecurePlayerControls = ({
                         </View>
 
                         <View style={styles.centerControls}>
-                            <TouchableIcon
-                                iconName={playing ? `pause-line` : `play-fill`}
-                                iconSize={30}
-                                onPress={handlePlayPause}
-                                onPressIn={() => (press.current = true)}
-                                onPressOut={() => (press.current = false)}
-                                color={'#ffffff'}
-                            />
+                            {buffering ? (
+                                <ActivityIndicator
+                                    animating={buffering}
+                                    size={50} // changed the size here
+                                    color="#ffffff"
+                                />
+                            ) : (
+                                <TouchableIcon
+                                    iconName={
+                                        playing ? `pause-line` : `play-fill`
+                                    }
+                                    iconSize={30}
+                                    onPress={handlePlayPause}
+                                    onPressIn={() => (press.current = true)}
+                                    onPressOut={() => (press.current = false)}
+                                    color={'#ffffff'}
+                                />
+                            )}
                         </View>
 
                         <View style={styles.bottomControls}>

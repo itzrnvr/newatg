@@ -2,8 +2,10 @@ import axios from 'axios';
 
 export interface BitrateAndResolution {
     bitrate: number | null;
-    resolution: string | null;
+    width: number | null;
+    height: number | null;
 }
+
 async function fetchVideoBitrateAndResolutions(
     url: string,
 ): Promise<BitrateAndResolution[]> {
@@ -21,9 +23,19 @@ async function fetchVideoBitrateAndResolutions(
     const infoArray = streamInfLines.map((line: string) => {
         const bandwidthMatch = line.match(/BANDWIDTH=(\d+)/);
         const resolutionMatch = line.match(/RESOLUTION=(\d+x\d+)/);
+        let width: number | null = null;
+        let height: number | null = null;
+
+        if (resolutionMatch) {
+            let dimensions = resolutionMatch[1].split('x');
+            width = Number(dimensions[0]);
+            height = Number(dimensions[1]);
+        }
+
         return {
-            bitrate: bandwidthMatch ? Number(bandwidthMatch[1]) : undefined,
-            resolution: resolutionMatch ? resolutionMatch[1] : undefined,
+            bitrate: bandwidthMatch ? Number(bandwidthMatch[1]) : null,
+            width,
+            height,
         };
     });
 
