@@ -2026,6 +2026,13 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.6.tgz"
   integrity sha512-RK/kBbYOQQHLYj9Z95eh7S6t7gq4Ojt/NT8HTk8bWVhA5DaF+5SMnxHKkP4gPNN3wAZkKP+VjAf0ebtYzf+fxg==
 
+"@types/react-native-dialog@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-dialog/-/react-native-dialog-8.0.0.tgz#2532a9b76787ddb4e63fbb02fd8daf42d601e0c8"
+  integrity sha512-SFqgfUm3agAs7bWH2Wk5uMy58aEwMRN4WBFT7xYnRlz32PpXqzgnxuMtqeUPuq416r5FybtxwbLgJtAtGfBesA==
+  dependencies:
+    react-native-dialog "*"
+
 "@types/react-native-orientation@^5.0.3":
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@types/react-native-orientation/-/react-native-orientation-5.0.3.tgz#e210a57b466700b9d4bbad53579de8f29b549755"
@@ -6606,6 +6613,11 @@ react-native-device-info@^10.11.0:
   version "10.11.0"
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-10.11.0.tgz#2c9f378f1c3c5eb9aafa803d015b84325991a9aa"
   integrity sha512-qRzhuYOm5ZXQi5dhfJFjDq157oipxcEW/fo0QyMm5+TI6V6/+P/tju+Hif6z0rpLCf7MV7iDVRv2Kqha4D/yvQ==
+
+react-native-dialog@*, react-native-dialog@^9.3.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-dialog/-/react-native-dialog-9.3.0.tgz#9d745cc51653a1e2ae08076b46f11d99723c47f6"
+  integrity sha512-JEOJY/0AzTM9grIl0BL8o/IJPIJru7k5MPj9POTE9RRezUEtgn0YSvCpTlBtG0obWgOdzg2otMz1OQvMXS0wMQ==
 
 react-native-encrypted-storage@^4.0.3:
   version "4.0.3"

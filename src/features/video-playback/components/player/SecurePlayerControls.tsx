@@ -1,4 +1,5 @@
 import {
+    StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
@@ -8,10 +9,29 @@ import {
 import TouchableIcon from '../TouchableIcon';
 import React, {useEffect, useRef, useState} from 'react';
 import Slider from '@react-native-community/slider';
+import {useNavigation} from '@react-navigation/native';
+
+interface SecurePlayerControlsProps {
+    onPlay: () => void;
+    onPause: () => void;
+    duration: number;
+    currentTime: number;
+    onChangeProgress: (value: number) => void;
+    onPressSettings: () => void;
+}
 
 let timeoutId: NodeJS.Timeout | null = null;
-const SecurePlayerControls = () => {
+const SecurePlayerControls = ({
+    onPlay,
+    onPause,
+    duration,
+    currentTime,
+    onChangeProgress,
+    onPressSettings,
+}: SecurePlayerControlsProps) => {
     let press = useRef(false);
+
+    const navigation = useNavigation();
 
     const [isVideoSettingsSheetOpen, setIsVideoSettingsSheetOpen] =
         useState(false);
@@ -23,7 +43,7 @@ const SecurePlayerControls = () => {
         if (timeoutId) clearTimeout(timeoutId);
 
         console.log('called');
-        timeoutId = setTimeout(() => setControlsVisible(false), 5000);
+        timeoutId = setTimeout(() => setControlsVisible(false), 4000);
     };
 
     const handleContainerPress = () => {
@@ -39,10 +59,16 @@ const SecurePlayerControls = () => {
         setProgress(value);
         console.log(value);
         restartTimer();
+        onChangeProgress?.(value);
     };
 
     useEffect(() => {
         console.log(playing);
+        if (playing) {
+            onPlay?.();
+        } else {
+            onPause?.();
+        }
     }, [playing]);
 
     useEffect(() => {
@@ -51,6 +77,18 @@ const SecurePlayerControls = () => {
             restartTimer();
         }
     }, [controlsVisible]);
+
+    useEffect(() => {
+        // hide status bar whenever this screen is focused
+        const unsubscribe = navigation.addListener('focus', () =>
+            StatusBar.setHidden(true, 'none'),
+        );
+        // show status bar whenever this screen is not focused
+        navigation.addListener('blur', () =>
+            StatusBar.setHidden(false, 'fade'),
+        );
+        return unsubscribe;
+    }, [navigation]);
 
     return (
         <TouchableWithoutFeedback
@@ -62,7 +100,10 @@ const SecurePlayerControls = () => {
                             <TouchableIcon
                                 iconName={'arrow-left-line'}
                                 iconSize={30}
-                                onPress={() => console.log('back')}
+                                onPress={() => {
+                                    navigation.goBack();
+                                    StatusBar.setHidden(false, 'fade');
+                                }}
                                 onPressIn={() => (press.current = true)}
                                 onPressOut={() => (press.current = false)}
                                 color={'#ffffff'}
@@ -82,13 +123,15 @@ const SecurePlayerControls = () => {
                         </View>
 
                         <View style={styles.bottomControls}>
-                            <Text style={styles.videoTime}>{'0:00/5:00'}</Text>
+                            <Text style={styles.videoTime}>{`${Math.round(
+                                currentTime,
+                            )}/${Math.round(duration)}`}</Text>
                             <Slider
                                 style={styles.slider}
                                 value={progress}
                                 onValueChange={handleProgressChange}
                                 minimumValue={0}
-                                maximumValue={100}
+                                maximumValue={Math.round(duration)}
                                 minimumTrackTintColor="#f00"
                                 maximumTrackTintColor="#f00"
                                 thumbTintColor="#f00"
@@ -96,7 +139,7 @@ const SecurePlayerControls = () => {
                             <TouchableIcon
                                 iconName={'settings-3-line'}
                                 iconSize={30}
-                                onPress={() => console.log('settings')}
+                                onPress={() => onPressSettings()}
                                 onPressIn={() => (press.current = true)}
                                 onPressOut={() => (press.current = false)}
                                 color={'#ffffff'}
