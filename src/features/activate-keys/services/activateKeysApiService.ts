@@ -42,7 +42,9 @@ export const fetchKeyStatus = (
                 successCallback(null);
             } else {
                 console.log('Error');
-                throw new Error(`HTTP error! status: ${response.data.status}`);
+                console.log(response.data);
+                console.log(response.data.response);
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
         })
         .catch((error: any) => {

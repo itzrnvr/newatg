@@ -1,14 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StyleSheet, View, Text, Image} from 'react-native';
 import {Button} from '@react-native-material/core';
 import {StackNavigationProp} from '@react-navigation/stack';
 import PrimaryButton from '../../features/activate-keys/components/PrimaryButton';
+import {MMKV} from 'react-native-mmkv';
 
 type SplashScreenProp = {
     navigation: StackNavigationProp<any, any>;
 };
 
+const storage = new MMKV();
 const SplashScreen: React.FC<SplashScreenProp> = ({navigation}) => {
+    const handleOnPress = () => {
+        if (storage.getBoolean('firstStart')) {
+            navigation.navigate('Home');
+        } else {
+            storage.set('firstStart', true);
+            navigation.navigate('OnBoarding');
+        }
+    };
+
     return (
         <View style={styles.container}>
             <Image
@@ -33,7 +44,7 @@ const SplashScreen: React.FC<SplashScreenProp> = ({navigation}) => {
                 <View className={'w-full px-8 mt-7'}>
                     <PrimaryButton
                         title={'Get Started'}
-                        onPress={() => navigation.navigate('OnBoarding')}
+                        onPress={() => handleOnPress()}
                     />
                 </View>
             </View>
