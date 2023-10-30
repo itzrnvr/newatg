@@ -6,6 +6,9 @@ import React from 'react';
 import {Dimensions} from 'react-native';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {StackParamList} from '../../../../App';
+import VideoPlayback from '../../../screens/videoPlayback/VideoPlayback';
+import {baseUrl, buyNow, website} from 'utils/Constants';
+import webScreen from '../../../screens/webview/WebScreen';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -17,29 +20,29 @@ const data: GridHomeActionItem[] = [
         id: 0,
         key: 'My Packages',
         asset: require(`../../../assets/mypackages.png`),
-        url: null,
+        uri: null,
         screen: 'MyPackages',
     },
     {
         id: 1,
         key: 'Activate Keys',
         asset: require(`../../../assets/activatekey.png`),
-        url: null,
+        uri: null,
         screen: 'ActivateKeys',
     },
     {
         id: 2,
         key: 'Assessment',
         asset: require(`../../../assets/assessment.png`),
-        url: null,
-        screen: 'ActivateKeys',
+        uri: `https://awakenthegenius.org/awakenpanel/website/cn_assessment_test/verify_user`,
+        screen: 'WebScreen',
     },
     {
         id: 3,
         key: 'Strength finder',
         asset: require(`../../../assets/strengthfinder.png`),
-        url: null,
-        screen: 'ActivateKeys',
+        uri: `https://awakenthegenius.org/awakenpanel/cn_website/strength`,
+        screen: 'WebScreen',
     },
     // Add more items here
 ];
@@ -48,7 +51,7 @@ interface GridHomeActionItem {
     id: number;
     key: string;
     asset: ImageSourcePropType;
-    url: string | null;
+    uri: string | null;
     screen: string | null;
 }
 
@@ -87,13 +90,19 @@ const GridHomeAction = () => {
     const navigation = useNavigation<NavigationProp<StackParamList>>();
 
     const handleItemClick = (item: GridHomeActionItem) => {
-        item.screen && navigation.navigate(item.screen as keyof StackParamList);
+        !item.uri
+            ? navigation.navigate(item.screen)
+            : navigation.navigate('WebScreen', {uri: item.uri});
     };
 
     return (
         <View className={'mt-8'}>
             <View className={'mx-3.5'} style={{height: windowHeight * 0.28}}>
-                <TouchableNativeFeedback className={'h-[234px] w-full'}>
+                <TouchableNativeFeedback
+                    className={'h-[234px] w-full'}
+                    onPress={() =>
+                        navigation.navigate('WebScreen', {uri: buyNow})
+                    }>
                     <Image
                         style={{
                             width: windowWidth - 28, //imported from Dimensions API
@@ -118,6 +127,9 @@ const GridHomeAction = () => {
 
             <View className={'rounded-2xl mb-16 mx-4 h-20 mt-24'}>
                 <TouchableNativeFeedback
+                    onPress={() =>
+                        navigation.navigate('WebScreen', {uri: website})
+                    }
                     className={
                         'justify-center items-center rounded-2xl h-full w-full bg-[#5585FF] opacity-95'
                     }>

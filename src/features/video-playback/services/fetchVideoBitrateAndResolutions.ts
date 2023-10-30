@@ -1,4 +1,9 @@
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
+
+// Create a custom axios instance
+const customAxios = axios.create();
+axiosRetry(customAxios, {retries: 5});
 
 export interface BitrateAndResolution {
     bitrate: number | null;
@@ -9,7 +14,7 @@ export interface BitrateAndResolution {
 async function fetchVideoBitrateAndResolutions(
     url: string,
 ): Promise<BitrateAndResolution[]> {
-    const response = await axios.get(url);
+    const response = await customAxios.get(url);
 
     const playlist = response.data;
     const lines = playlist.split('\n');

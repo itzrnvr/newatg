@@ -23,13 +23,12 @@ export const ScreenContainer: React.FC<ScreenContainerProps> = ({
                 backgroundColor={statusBarBackgroundColor}
                 barStyle={statusBarStyle}
             />
-            {!loading &&
-                (safeAreaViewEnabled ? (
-                    <SafeAreaView className="h-full">{children}</SafeAreaView>
-                ) : (
-                    <View className="h-full">{children}</View>
-                ))}
             {loading && <LoadingModal isLoading={loading} />}
+            {safeAreaViewEnabled ? (
+                <SafeAreaView className="h-full">{children}</SafeAreaView>
+            ) : (
+                <View className="h-full">{children}</View>
+            )}
         </>
     );
 };

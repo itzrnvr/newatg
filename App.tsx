@@ -8,12 +8,14 @@ import ActivateKeys from './src/screens/activate-keys/ActivateKeys';
 import MyPackages from './src/screens/myPackages/MyPackages';
 import VideoPlayback from './src/screens/videoPlayback/VideoPlayback';
 import {VideoDetails} from './src/features/my-packages/services/myPackagesApiService';
+import WebScreen from './src/screens/webview/WebScreen';
 
 export type StackParamList = {
     Home: undefined;
     ActivateKeys: undefined;
     MyPackages: undefined;
     VideoPlayback: {videoDetails: VideoDetails};
+    WebScreen: {uri: string};
 };
 
 const App = () => {
@@ -42,6 +44,12 @@ const App = () => {
                     <Stack.Screen
                         name="VideoPlayback"
                         component={VideoPlayback}
+                        options={{headerShown: false}}
+                    />
+
+                    <Stack.Screen
+                        name="WebScreen"
+                        component={WebScreen}
                         options={{headerShown: false}}
                     />
                 </Stack.Navigator>

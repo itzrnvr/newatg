@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {View, Dimensions, StyleSheet, Text, Image} from 'react-native';
+import {View, Dimensions, StyleSheet, Text, Image, Linking} from 'react-native';
 import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
@@ -28,7 +28,8 @@ const showToast = () => {
 };
 
 const CarouselItem: FC<CarouselItem> = ({item}) => (
-    <TouchableNativeFeedback onPress={() => showToast()}>
+    <TouchableNativeFeedback
+        onPress={() => Linking.openURL(item.video_ytube_link)}>
         <View className={'items-center'}>
             <Image
                 style={{resizeMode: 'cover'}}
@@ -37,9 +38,10 @@ const CarouselItem: FC<CarouselItem> = ({item}) => (
             />
 
             <Text
-                className={'mt-3.5 text-lg text-slate-950 '}
+                numberOfLines={1}
+                className={'mt-3.5 mx-2 text-lg text-slate-950 '}
                 style={{fontFamily: 'Roboto-Regular'}}>
-                Mind Maps- Higher Level
+                {item.video_title}
             </Text>
         </View>
     </TouchableNativeFeedback>

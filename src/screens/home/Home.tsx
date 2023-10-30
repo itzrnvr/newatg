@@ -7,6 +7,7 @@ import YoutubeCarousel from '../../features/home/components/CarouselYoutube';
 import Toast from 'react-native-toast-message';
 import {ListHome, ListHomeItem} from '../../features/home/components/ListHome';
 import {wait} from 'utils/misc';
+import {makeSecureRequest} from '../../features/video-playback/services/networkEncryptionService';
 
 // Define the list of components to render
 const componentsToRender: ListHomeItem[] = [
@@ -54,6 +55,7 @@ export const Home = () => {
 
     useEffect(() => {
         viewModel.fetchYoutubeCarousel();
+        makeSecureRequest('HEllo');
     }, []);
 
     useEffect(() => {
@@ -72,10 +74,14 @@ export const Home = () => {
             loading={viewModel.isLoading}
             statusBarBackgroundColor={'#ffffff'}>
             <View className="h-full bg-white items-center justify-center">
-                {viewModel.isError && <Text className={'text-black'}>Pull down to refresh...</Text>}
+                {viewModel.isError && (
+                    <Text className={'text-black'}>
+                        Pull down to refresh...
+                    </Text>
+                )}
                 <ListHome
                     componentsToRender={listHomeItems}
-                    onRefresh={() => viewModel.fetchYoutubeCarousel()}
+                    onRefresh={() => makeSecureRequest('gg')}
                 />
             </View>
         </ScreenContainer>

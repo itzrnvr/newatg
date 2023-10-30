@@ -1,8 +1,14 @@
 import {Text, View} from 'react-native';
 import Icon from 'react-native-remix-icon';
 import React from 'react';
+import TouchableIcon from '../../video-playback/components/TouchableIcon';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {faqs} from 'utils/Constants';
+import {StackParamList} from '../../../../App';
 
 const HeaderHome = () => {
+    const navigation = useNavigation<NavigationProp<StackParamList>>();
+
     return (
         <View
             className={
@@ -14,12 +20,17 @@ const HeaderHome = () => {
                 Welcome to Awaken The Genius!
             </Text>
 
-            <Icon
-                className={'right-4 absolute'}
-                name="account-circle-line"
-                size="40"
-                color="black"
-            />
+            <View className={'right-4 absolute'}>
+                <TouchableIcon
+                    iconName="account-circle-line"
+                    iconSize={40}
+                    color="black"
+                    padding={0}
+                    onPress={() =>
+                        navigation.navigate('WebScreen', {uri: faqs})
+                    }
+                />
+            </View>
         </View>
     );
 };
