@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {Home} from './src/screens/home/Home';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
@@ -9,8 +9,12 @@ import MyPackages from './src/screens/myPackages/MyPackages';
 import VideoPlayback from './src/screens/videoPlayback/VideoPlayback';
 import {VideoDetails} from './src/features/my-packages/services/myPackagesApiService';
 import WebScreen from './src/screens/webview/WebScreen';
+import SplashScreen from './src/screens/onboarding/SplashScreen';
+import OnBoardingScreen from './src/screens/onboarding/OnBoardingScreen';
 
 export type StackParamList = {
+    SplashScreen: undefined;
+    OnBoarding: undefined;
     Home: undefined;
     ActivateKeys: undefined;
     MyPackages: undefined;
@@ -24,7 +28,19 @@ const App = () => {
     return (
         <GestureHandlerRootView style={{flex: 1}}>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Home">
+                <Stack.Navigator initialRouteName="SplashScreen">
+                    <Stack.Screen
+                        name="SplashScreen"
+                        component={SplashScreen}
+                        options={{headerShown: false}}
+                    />
+
+                    <Stack.Screen
+                        name="OnBoarding"
+                        component={OnBoardingScreen}
+                        options={{headerShown: false}}
+                    />
+
                     <Stack.Screen
                         name="Home"
                         component={Home}
