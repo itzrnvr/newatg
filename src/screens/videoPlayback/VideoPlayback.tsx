@@ -17,17 +17,16 @@ const VideoPlayback = ({
     route,
 }: NativeStackScreenProps<StackParamList, 'VideoPlayback'>) => {
     const {videoDetails} = route.params;
-    const {setKeys} = useDrmStore();
     const [tracks, setTracks] = useState<BitrateAndResolution[]>();
     const [selectedTrack, setSelectedTrack] =
         useState<BitrateAndResolution | null>(null);
     const [dialogVisible, setDialogVisible] = useState(false);
 
     //const url = 'https://content.jwplatform.com/manifests/yp34SRmf.m3u8';
-    const url =
-        'https://junglebookpune.org/test_awaken_genius/videos/speed_reading/master.m3u8';
+    // const url =
+    //     'https://junglebookpune.org/test_awaken_genius/videos/speed_reading/master.m3u8';
     const getVideoResolutions = () => {
-        fetchVideoBitrateAndResolutions(url)
+        fetchVideoBitrateAndResolutions(videoDetails.link)
             .then(bitratesAndResolutions => {
                 console.log(
                     'Bitrates and Resolutions:',
@@ -40,17 +39,10 @@ const VideoPlayback = ({
             });
     };
 
-    const fetchEncryptedKey = async () => {
-        setKeys('', '');
-        const {authKey, privateKey} = await makeSecureRequest();
-        setKeys(authKey, privateKey);
-        console.log('keysSet');
-    };
-
     useEffect(() => {
+        console.log(videoDetails.link);
         Orientation.lockToLandscape();
         getVideoResolutions();
-        fetchEncryptedKey();
         return () => {
             Orientation.lockToPortrait();
         };
@@ -58,11 +50,13 @@ const VideoPlayback = ({
 
     //'https://junglebookpune.org/test_awaken_genius/videos/speed_reading/master.m3u8'
 
+
     return (
         <PaperProvider>
             <View className={'h-full>'}>
                 <SecurePlayer
-                    src={url}
+                    title={videoDetails.title}
+                    src={videoDetails.link}
                     currentTrack={selectedTrack}
                     onPressSettings={() => setDialogVisible(true)}
                 />

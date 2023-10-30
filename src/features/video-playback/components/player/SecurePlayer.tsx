@@ -11,18 +11,20 @@ import {BitrateAndResolution} from '../../services/fetchVideoBitrateAndResolutio
 import {useDrmStore} from '../../store';
 
 type SecurePlayerProps = {
+    title: string;
     src: string;
     currentTrack: BitrateAndResolution | null;
     onPressSettings: () => void;
 };
 
 const SecurePlayer: React.FC<SecurePlayerProps> = ({
+    title,
     src,
     currentTrack,
     onPressSettings,
 }) => {
     const drmStore = useDrmStore();
-
+    const [playing, setPlaying] = useState(false);
     const [paused, setPaused] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -38,10 +40,12 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
     const handleBuffer = (buffer: OnBufferData) => {
         console.log('Buffering: ' + buffer.isBuffering);
         setBuffering(buffer.isBuffering);
+        setPlaying(!buffer.isBuffering);
     };
 
     const handleSliding = (value: number) => {
         videoPlayerRef.current?.seek(value);
+        setCurrentTime(value);
     };
 
     const videoPlayerRef: React.MutableRefObject<Video | null> = useRef(null);
@@ -63,11 +67,19 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
             value: currentTrack.height,
         };
     }
-    
+
     useEffect(() => {
-        console.log("encryptedVid", drmStore.encryptedVideoKey);
-        console.log("authKEy", drmStore.authKey);
+        console.log('encryptedVid', drmStore.encryptedVideoKey);
+        console.log('authKEy', drmStore.authKey);
     }, []);
+
+    useEffect(() => {
+        if (playing) {
+            setPaused(false);
+        } else {
+            setPaused(true);
+        }
+    }, [playing]);
 
     return (
         <View className={'relative bg-black'}>
@@ -95,6 +107,7 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
                 }}
                 onVideoEnd={() => {
                     console.log('onVideoEnd');
+                    setPlaying(false);
                 }}
                 onError={(error: LoadError) => {
                     console.log(error);
@@ -103,6 +116,9 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
 
             <View className={'absolute top-0 left-0 right-0 bottom-0'}>
                 <SecurePlayerControls
+                    title={title}
+                    playing={playing}
+                    setPlaying={setPlaying}
                     onPlay={() => setPaused(false)}
                     onPause={() => setPaused(true)}
                     onChangeProgress={handleSliding}

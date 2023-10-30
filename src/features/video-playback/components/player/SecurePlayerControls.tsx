@@ -14,6 +14,9 @@ import {useNavigation} from '@react-navigation/native';
 import * as buffer from 'buffer';
 
 interface SecurePlayerControlsProps {
+    title: string;
+    playing: boolean;
+    setPlaying: (status: boolean) => void;
     onPlay: () => void;
     onPause: () => void;
     duration: number;
@@ -25,6 +28,9 @@ interface SecurePlayerControlsProps {
 
 let timeoutId: NodeJS.Timeout | null = null;
 const SecurePlayerControls = ({
+    title,
+    playing,
+    setPlaying,
     onPlay,
     onPause,
     duration,
@@ -39,9 +45,10 @@ const SecurePlayerControls = ({
 
     const [isVideoSettingsSheetOpen, setIsVideoSettingsSheetOpen] =
         useState(false);
-    const [playing, setPlaying] = useState(false);
+    //const [playing, setPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
     const [controlsVisible, setControlsVisible] = useState(true);
+    const [finished, setFinished] = useState(false);
     const restartTimer = () => {
         if (timeoutId) clearTimeout(timeoutId);
 
@@ -54,6 +61,11 @@ const SecurePlayerControls = ({
     };
 
     const handlePlayPause = () => {
+        if(finished){
+            setFinished(false);
+            handleProgressChange(0);
+            setPlaying(true);
+        }
         console.log('handlePlayPause');
         setPlaying(!playing);
         restartTimer();
@@ -72,7 +84,13 @@ const SecurePlayerControls = ({
         } else {
             onPause?.();
         }
-    }, [playing]);
+
+        if (Math.round(currentTime) === Math.round(duration) && Math.round(duration) !== 0) {
+            setPlaying(false);
+            console.log('finished');
+            setFinished(true);
+        }
+    }, [playing, currentTime]);
 
     useEffect(() => {
         console.log('Container Pressed', `controlsVisible ${controlsVisible}`);
@@ -111,7 +129,7 @@ const SecurePlayerControls = ({
                                 onPressOut={() => (press.current = false)}
                                 color={'#ffffff'}
                             />
-                            <Text style={styles.title}>Speed Reading</Text>
+                            <Text style={styles.title}>{title}</Text>
                         </View>
 
                         <View style={styles.centerControls}>

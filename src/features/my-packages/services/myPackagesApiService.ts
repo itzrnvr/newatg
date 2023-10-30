@@ -3,10 +3,9 @@ import axios from 'axios';
 
 export interface VideoDetails {
     title: string;
-    subtitle: string;
     link: string;
     thumbnail: string;
-    size: number;
+    video_id: string;
 }
 
 export interface Package {
@@ -67,6 +66,7 @@ export const fetchMainVideos = (
                 successCallback(response.data);
             } else {
                 console.log('Error');
+                console.log(response.data);
                 throw new Error(`HTTP error! status: ${response.data.status}`);
             }
         })

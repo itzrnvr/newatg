@@ -55,7 +55,6 @@ export const Home = () => {
 
     useEffect(() => {
         viewModel.fetchYoutubeCarousel();
-        makeSecureRequest('HEllo');
     }, []);
 
     useEffect(() => {
@@ -81,7 +80,7 @@ export const Home = () => {
                 )}
                 <ListHome
                     componentsToRender={listHomeItems}
-                    onRefresh={() => makeSecureRequest('gg')}
+                    onRefresh={() => viewModel.fetchYoutubeCarousel()}
                 />
             </View>
         </ScreenContainer>

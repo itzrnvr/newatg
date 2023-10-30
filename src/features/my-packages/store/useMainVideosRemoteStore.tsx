@@ -40,7 +40,7 @@ export const useMainVideosRemoteStore = create(
                                 });
                                 console.log(
                                     'Failed fetching Main Videos: ',
-                                    error,
+                                    error.message,
                                 );
                             });
                     })

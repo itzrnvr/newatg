@@ -27,7 +27,7 @@ function decryptWithAES(cipherText: string): string {
     return originalText;
 }
 
-export const makeSecureRequest = async () => {
+export const makeSecureRequest = async (video_id: string) => {
     // const public_key =
     //     'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmHzD76i8DA25nC+QsswiOM0lW+gViiQD4tEm7suxBc2BGibtdlrsprVIId92hSjQKx4x8+XVWU6k89T5vy8YtxpXN759OWdGkDi8uvZuYclMjW9Rao+oqSvbXH37R7oSY287I+6uOHclGhniQN3qRyoXBkbhDk0/FTI/i549q/gGk1UZYv449KLrDOqmtohRcIyAYVnvvWtD1kIzourqhMtEIrPqwoBqTaUA9kOIXw1jMovao2TN52j48KgOg9KjqtdwUwD9e6n7hJd/subF6woc8L7zjJFOHH5gacUC7vtiMpBpnSyLQpjFLepYYwftjsRmg4xLdh+Zvgw3xqi4lwIDAQAB';
 
@@ -36,7 +36,7 @@ export const makeSecureRequest = async () => {
     const privateKey = keyPair.privateKey;
 
     console.log('pub', public_key);
-    const video_id = 'speed_reading';
+    // const video_id = 'speed_reading';
 
     const payload = {
         public_key,
