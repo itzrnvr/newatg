@@ -8,6 +8,7 @@ import Video, {
 import {View} from 'react-native';
 import SecurePlayerControls from './SecurePlayerControls';
 import {BitrateAndResolution} from '../../services/fetchVideoBitrateAndResolutions';
+import {useDrmStore} from '../../store';
 
 type SecurePlayerProps = {
     src: string;
@@ -20,6 +21,8 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
     currentTrack,
     onPressSettings,
 }) => {
+    const drmStore = useDrmStore();
+
     const [paused, setPaused] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -60,6 +63,11 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
             value: currentTrack.height,
         };
     }
+    
+    useEffect(() => {
+        console.log("encryptedVid", drmStore.encryptedVideoKey);
+        console.log("authKEy", drmStore.authKey);
+    }, []);
 
     return (
         <View className={'relative bg-black'}>
@@ -67,6 +75,10 @@ const SecurePlayer: React.FC<SecurePlayerProps> = ({
                 {...videoProps}
                 ref={videoPlayerRef}
                 source={{uri: src}}
+                drmConfig={{
+                    encryptedVideoKey: drmStore.encryptedVideoKey,
+                    authKey: drmStore.authKey,
+                }}
                 className={'h-full w-full'}
                 resizeMode="contain"
                 paused={paused}

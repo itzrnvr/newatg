@@ -9,11 +9,15 @@ import fetchVideoBitrateAndResolutions, {
 } from '../../features/video-playback/services/fetchVideoBitrateAndResolutions';
 import QualitySelectionDialog from '../../features/video-playback/components/dialog/QualitySelectionDialog';
 import {PaperProvider} from 'react-native-paper';
+import {fetchMainVideos} from '../../features/my-packages/services/myPackagesApiService';
+import {makeSecureRequest} from '../../features/video-playback/services/networkEncryptionService';
+import {useDrmStore} from '../../features/video-playback/store';
 
 const VideoPlayback = ({
     route,
 }: NativeStackScreenProps<StackParamList, 'VideoPlayback'>) => {
     const {videoDetails} = route.params;
+    const {setKeys} = useDrmStore();
     const [tracks, setTracks] = useState<BitrateAndResolution[]>();
     const [selectedTrack, setSelectedTrack] =
         useState<BitrateAndResolution | null>(null);
@@ -36,9 +40,17 @@ const VideoPlayback = ({
             });
     };
 
+    const fetchEncryptedKey = async () => {
+        setKeys('', '');
+        const {authKey, privateKey} = await makeSecureRequest();
+        setKeys(authKey, privateKey);
+        console.log('keysSet');
+    };
+
     useEffect(() => {
         Orientation.lockToLandscape();
         getVideoResolutions();
+        fetchEncryptedKey();
         return () => {
             Orientation.lockToPortrait();
         };

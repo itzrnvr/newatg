@@ -1,6 +1,7 @@
 import axios, {AxiosResponse} from 'axios';
 import CryptoJS from 'react-native-crypto-js';
 import {NativeModules} from 'react-native';
+import {useDrmStore} from '../store';
 
 const {RsaManager} = NativeModules;
 
@@ -47,29 +48,17 @@ export const makeSecureRequest = async () => {
     const CloudflareWorkerUrl: string =
         'https://atg-service-encryption.saiyaman.workers.dev';
 
-    axios
-        .post(CloudflareWorkerUrl, encryptedData)
-        .then(async (response: AxiosResponse) => {
-            // Decrypting received data
+    const response = await axios.post(CloudflareWorkerUrl, encryptedData);
 
-            const encryptedData = response.data;
+    const encryptedResponseData = await response.data;
 
-            console.log('encryptedData', encryptedData);
+    console.log('encryptedData', encryptedResponseData);
 
-            const decryptedData: string = decryptWithAES(encryptedData);
+    const decryptedData: string = decryptWithAES(encryptedResponseData);
 
-            console.log('decrypted: ', decryptedData); // logging the decrypted data
+    console.log('decrypted: ', decryptedData); // logging the decrypted data
 
-            const authKey = JSON.parse(decryptedData).auth_key;
+    const authKey = JSON.parse(decryptedData).auth_key;
 
-            const keyResponse = await RsaManager.decryptData(
-                privateKey,
-                authKey,
-            );
-
-            console.log(keyResponse.decryptedData);
-        })
-        .catch(error => {
-            console.error(error); // logging error if any
-        });
+    return {authKey, privateKey};
 };
