@@ -12,6 +12,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Slider from '@react-native-community/slider';
 import {useNavigation} from '@react-navigation/native';
 import * as buffer from 'buffer';
+import {formatSeconds} from "utils/misc";
 
 interface SecurePlayerControlsProps {
     title: string;
@@ -144,7 +145,7 @@ const SecurePlayerControls = ({
                                     iconName={
                                         playing ? `pause-line` : `play-fill`
                                     }
-                                    iconSize={30}
+                                    iconSize={50}
                                     onPress={handlePlayPause}
                                     onPressIn={() => (press.current = true)}
                                     onPressOut={() => (press.current = false)}
@@ -154,9 +155,9 @@ const SecurePlayerControls = ({
                         </View>
 
                         <View style={styles.bottomControls}>
-                            <Text style={styles.videoTime}>{`${Math.round(
+                            <Text style={styles.videoTime}>{`${formatSeconds(
                                 currentTime,
-                            )}/${Math.round(duration)}`}</Text>
+                            )}/${formatSeconds(duration)}`}</Text>
                             <Slider
                                 style={styles.slider}
                                 value={progress}
