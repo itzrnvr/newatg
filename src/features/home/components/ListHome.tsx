@@ -8,6 +8,7 @@ import GridHomeAction from './GridHomeAction';
 import {RefreshControl} from 'react-native';
 import {wait} from 'utils/misc';
 import MidSectionImage from './MidSectionImage';
+import {useHomeInteractiveEventsStore} from '../store/homeInteractiveEventsStore';
 
 export type ListHomeItem = {
     type: 'header' | 'carousel' | 'midSectionImage' | 'keysCarousel' | 'grid';
@@ -22,6 +23,8 @@ type ListHomeProps = {
 
 export function ListHome({componentsToRender, onRefresh}: ListHomeProps) {
     const [isRefreshing, setIsRefreshing] = useState(false);
+
+    const {scrolling, setScrolling} = useHomeInteractiveEventsStore();
 
     const requestRefresh = async () => {
         setIsRefreshing(true);
@@ -55,6 +58,8 @@ export function ListHome({componentsToRender, onRefresh}: ListHomeProps) {
 
     return (
         <FlatList
+            onScrollBeginDrag={() => setScrolling(true)}
+            onScrollEndDrag={() => setScrolling(false)}
             refreshing={isRefreshing}
             onRefresh={requestRefresh}
             showsVerticalScrollIndicator={false}

@@ -70,10 +70,6 @@ function PackagesScreen() {
     }, []);
 
     useEffect(() => {
-        console.log(viewModel.packages[0].data);
-    }, [viewModel.packages]);
-
-    useEffect(() => {
         if (viewModel.error) {
             errorToast('Something went wrong!', viewModel.error?.message);
             viewModel.resetError();
@@ -100,7 +96,7 @@ function PackagesScreen() {
 
     return (
         <ScreenContainer loading={loading}>
-            <View className={'w-full'}>
+            <View className={'w-full pr-0.5'}>
                 <PackagesList
                     onPress={(item: VideoDetails) =>
                         handleOnPackageItemClick(item)

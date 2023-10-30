@@ -5,6 +5,7 @@ import Carousel, {Pagination} from 'react-native-snap-carousel';
 import {YoutubeCarouselItem} from '../store/YoutubeCarouselStore';
 import Toast from 'react-native-toast-message';
 import Icon from 'react-native-remix-icon';
+import {useHomeInteractiveEventsStore} from '../store/homeInteractiveEventsStore';
 
 const DATA = [
     {id: '1', backgroundColor: 'tomato'},
@@ -27,25 +28,30 @@ const showToast = () => {
     });
 };
 
-const CarouselItem: FC<CarouselItem> = ({item}) => (
-    <TouchableNativeFeedback
-        onPress={() => Linking.openURL(item.video_ytube_link)}>
-        <View className={'items-center'}>
-            <Image
-                style={{resizeMode: 'cover'}}
-                className={'h-[200] w-full rounded-[12px]'}
-                source={require('../../../assets/youtube.png')}
-            />
+const CarouselItem: FC<CarouselItem> = ({item}) => {
+    const {scrolling, setScrolling} = useHomeInteractiveEventsStore();
 
-            <Text
-                numberOfLines={1}
-                className={'mt-3.5 mx-2 text-lg text-slate-950 '}
-                style={{fontFamily: 'Roboto-Regular'}}>
-                {item.video_title}
-            </Text>
-        </View>
-    </TouchableNativeFeedback>
-);
+    return (
+        <TouchableNativeFeedback
+            disabled={scrolling}
+            onPress={() => Linking.openURL(item.video_ytube_link)}>
+            <View className={'items-center'}>
+                <Image
+                    style={{resizeMode: 'cover'}}
+                    className={'h-[200] w-full rounded-[12px]'}
+                    source={require('../../../assets/youtube.png')}
+                />
+
+                <Text
+                    numberOfLines={1}
+                    className={'mt-3.5 mx-2 text-lg text-slate-950 '}
+                    style={{fontFamily: 'Roboto-Regular'}}>
+                    {item.video_title}
+                </Text>
+            </View>
+        </TouchableNativeFeedback>
+    );
+};
 
 interface YoutubeCarouselPropTypes {
     carouselData: YoutubeCarouselItem[];

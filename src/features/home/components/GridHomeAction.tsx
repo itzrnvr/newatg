@@ -9,6 +9,7 @@ import {StackParamList} from '../../../../App';
 import VideoPlayback from '../../../screens/videoPlayback/VideoPlayback';
 import {baseUrl, buyNow, website} from 'utils/Constants';
 import webScreen from '../../../screens/webview/WebScreen';
+import {useHomeInteractiveEventsStore} from '../store/homeInteractiveEventsStore';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -58,36 +59,41 @@ interface GridHomeActionItem {
 interface RenderItemProps {
     item: GridHomeActionItem;
     onPress: (item: GridHomeActionItem) => void;
+    scrolling: boolean;
 }
 
-const renderItem = ({item, onPress}: RenderItemProps) => (
-    <TouchableNativeFeedback
-        className={`h-[200px] ${
-            item.id % 2 === 0 ? 'ml-2 mt-2' : 'm-2 mr-2.5'
-        }`}
-        style={{
-            width: windowWidth * 0.45,
-            height: windowHeight * 0.22,
-        }}
-        onPress={() => onPress(item)}>
-        <View className={'justify-center items-center'}>
-            <Image
-                style={{
-                    width: windowWidth * 0.45,
-                    height: windowHeight * 0.175,
-                }}
-                resizeMode={'cover'}
-                source={item.asset}
-            />
-            <Text className={'text-slate-950'}>{item.key}</Text>
-        </View>
-    </TouchableNativeFeedback>
-);
+const renderItem = ({item, onPress, scrolling}: RenderItemProps) => {
+    return (
+        <TouchableNativeFeedback
+            disabled={scrolling}
+            className={`h-[200px] ${
+                item.id % 2 === 0 ? 'ml-2 mt-2' : 'm-2 mr-2.5'
+            }`}
+            style={{
+                width: windowWidth * 0.45,
+                height: windowHeight * 0.22,
+            }}
+            onPress={() => onPress(item)}>
+            <View className={'justify-center items-center'}>
+                <Image
+                    style={{
+                        width: windowWidth * 0.45,
+                        height: windowHeight * 0.175,
+                    }}
+                    resizeMode={'cover'}
+                    source={item.asset}
+                />
+                <Text className={'text-slate-950'}>{item.key}</Text>
+            </View>
+        </TouchableNativeFeedback>
+    );
+};
 
 export interface GridHomeActionProps {}
 
 const GridHomeAction = () => {
     const navigation = useNavigation<NavigationProp<StackParamList>>();
+    const {scrolling, setScrolling} = useHomeInteractiveEventsStore();
 
     const handleItemClick = (item: GridHomeActionItem) => {
         !item.uri
@@ -99,6 +105,7 @@ const GridHomeAction = () => {
         <View className={'mt-8'}>
             <View className={'mx-3.5'} style={{height: windowHeight * 0.28}}>
                 <TouchableNativeFeedback
+                    disabled={scrolling}
                     className={'h-[234px] w-full'}
                     onPress={() =>
                         navigation.navigate('WebScreen', {uri: buyNow})
@@ -118,7 +125,7 @@ const GridHomeAction = () => {
                 <FlatList
                     data={data}
                     renderItem={({item}) =>
-                        renderItem({item, onPress: handleItemClick})
+                        renderItem({item, onPress: handleItemClick, scrolling})
                     }
                     keyExtractor={item => item.key}
                     numColumns={numColumns}
@@ -127,6 +134,7 @@ const GridHomeAction = () => {
 
             <View className={'rounded-2xl mb-16 mx-4 h-20 mt-24'}>
                 <TouchableNativeFeedback
+                    disabled={scrolling}
                     onPress={() =>
                         navigation.navigate('WebScreen', {uri: website})
                     }
