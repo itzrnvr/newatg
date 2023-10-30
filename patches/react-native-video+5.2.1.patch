@@ -34,132 +34,100 @@ index 0000000..5ff383e
 +o/debug
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.dex
 new file mode 100644
-index 0000000..9267307
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DataSourceUtil.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DataSourceUtil.dex
 new file mode 100644
-index 0000000..09fc7f0
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DataSourceUtil.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.dex
 new file mode 100644
-index 0000000..0b3194f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$1.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$1.dex
 new file mode 100644
-index 0000000..53e7610
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$1.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.dex
 new file mode 100644
-index 0000000..d031ffb
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView.dex
 new file mode 100644
-index 0000000..e5dceaf
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ExoPlayerView.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.dex
 new file mode 100644
-index 0000000..5c47720
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.dex
 new file mode 100644
-index 0000000..e6328a3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.dex
 new file mode 100644
-index 0000000..e8a4a43
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.dex
 new file mode 100644
-index 0000000..cc34b6f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.dex
 new file mode 100644
-index 0000000..898060b
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.dex
 new file mode 100644
-index 0000000..2864498
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.dex
 new file mode 100644
-index 0000000..bb65684
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.dex
 new file mode 100644
-index 0000000..3cfe1bf
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView.dex
 new file mode 100644
-index 0000000..df83fac
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerView.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.dex
 new file mode 100644
-index 0000000..5121419
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode$Mode.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode$Mode.dex
 new file mode 100644
-index 0000000..e48f8ba
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode$Mode.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode.dex
 new file mode 100644
-index 0000000..b9507ef
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/ResizeMode.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.dex
 new file mode 100644
-index 0000000..0e60f5e
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter.dex
 new file mode 100644
-index 0000000..81a777d
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/VideoEventEmitter.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Bitrate.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Bitrate.dex
 new file mode 100644
-index 0000000..65364da
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Bitrate.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.dex
 new file mode 100644
-index 0000000..8a3f7d3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network.dex
 new file mode 100644
-index 0000000..29b0397
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/Network.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.dex
 new file mode 100644
-index 0000000..d766b3e
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.dex
 new file mode 100644
-index 0000000..95106d3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.dex
 new file mode 100644
-index 0000000..5921ccd
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/BuildConfig.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/BuildConfig.dex
 new file mode 100644
-index 0000000..475d4cd
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/BuildConfig.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/ReactVideoPackage.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/ReactVideoPackage.dex
 new file mode 100644
-index 0000000..cf82945
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/react/ReactVideoPackage.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.dex
 new file mode 100644
-index 0000000..857d8d9
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener$1.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener$1.dex
 new file mode 100644
-index 0000000..c3a7bb0
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener$1.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener.dex
 new file mode 100644
-index 0000000..3382025
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/debug/com/brentvatne/receiver/BecomingNoisyListener.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/desugar_graph.bin b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/desugar_graph.bin
 new file mode 100644
-index 0000000..61b9ed3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/37beca92a7502f9da377da958da99495/transformed/desugar_graph.bin differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/3938047b89b44c91c34c9ee439f88239/results.bin b/node_modules/react-native-video/android-exoplayer/build/.transforms/3938047b89b44c91c34c9ee439f88239/results.bin
 new file mode 100644
 index 0000000..1ed65e0
@@ -187,8 +155,7 @@ index 0000000..0d259dd
 +o/classes
 diff --git a/node_modules/react-native-video/android-exoplayer/build/.transforms/ed96ea110cd7edd60722f1b955ab79b0/transformed/classes/classes.dex b/node_modules/react-native-video/android-exoplayer/build/.transforms/ed96ea110cd7edd60722f1b955ab79b0/transformed/classes/classes.dex
 new file mode 100644
-index 0000000..d37a90f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/.transforms/ed96ea110cd7edd60722f1b955ab79b0/transformed/classes/classes.dex differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/generated/source/buildConfig/debug/com/brentvatne/react/BuildConfig.java b/node_modules/react-native-video/android-exoplayer/build/generated/source/buildConfig/debug/com/brentvatne/react/BuildConfig.java
 new file mode 100644
 index 0000000..b769842
@@ -2768,11 +2735,11 @@ index 0000000..6d72a93
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/compiled_local_resources/debug/out/layout_exo_player_control_view.xml.flat differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-video/android-exoplayer/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
 new file mode 100644
-index 0000000..11de635
+index 0000000..8b084d5
 --- /dev/null
 +++ b/node_modules/react-native-video/android-exoplayer/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
 @@ -0,0 +1,2 @@
-+#Mon Oct 30 06:20:03 IST 2023
++#Tue Oct 31 00:50:21 IST 2023
 +com.brentvatne.react.react-native-video-main-7\:/layout/exo_player_control_view.xml=/Users/ranveer/WebstormProjects/newatg/node_modules/react-native-video/android-exoplayer/build/intermediates/packaged_res/debug/layout/exo_player_control_view.xml
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml b/node_modules/react-native-video/android-exoplayer/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml
 new file mode 100644
@@ -3121,132 +3088,100 @@ index 0000000..69801a4
 \ No newline at end of file
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/META-INF/react-native-video_debug.kotlin_module b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/META-INF/react-native-video_debug.kotlin_module
 new file mode 100644
-index 0000000..e2314f5
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/META-INF/react-native-video_debug.kotlin_module differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.class
 new file mode 100644
-index 0000000..b27bcfe
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/AspectRatioFrameLayout.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DataSourceUtil.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DataSourceUtil.class
 new file mode 100644
-index 0000000..1f4d80f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DataSourceUtil.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.class
 new file mode 100644
-index 0000000..1f17d27
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/DefaultReactExoplayerConfig.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$1.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$1.class
 new file mode 100644
-index 0000000..01a23fc
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$1.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.class
 new file mode 100644
-index 0000000..8921c37
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView$ComponentListener.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView.class
 new file mode 100644
-index 0000000..b887359
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ExoPlayerView.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.class
 new file mode 100644
-index 0000000..35f557c
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/RawResourceDataSourceFactory.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.class
 new file mode 100644
-index 0000000..b9f007d
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerConfig.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.class
 new file mode 100644
-index 0000000..1161fae
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$1.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.class
 new file mode 100644
-index 0000000..41519dd
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$2.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.class
 new file mode 100644
-index 0000000..453119a
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$3.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.class
 new file mode 100644
-index 0000000..79eea6b
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$4.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.class
 new file mode 100644
-index 0000000..bd6e1b0
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$5.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.class
 new file mode 100644
-index 0000000..681d44e
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView$6.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView.class
 new file mode 100644
-index 0000000..328fba8
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerView.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.class
 new file mode 100644
-index 0000000..ae03381
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ReactExoplayerViewManager.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode$Mode.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode$Mode.class
 new file mode 100644
-index 0000000..5d3e229
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode$Mode.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode.class
 new file mode 100644
-index 0000000..4e780fa
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/ResizeMode.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.class
 new file mode 100644
-index 0000000..76707b2
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter$VideoEvents.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter.class
 new file mode 100644
-index 0000000..e04e689
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/VideoEventEmitter.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Bitrate.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Bitrate.class
 new file mode 100644
-index 0000000..ef1513f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Bitrate.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.class
 new file mode 100644
-index 0000000..c815f13
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network$client$2.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network.class
 new file mode 100644
-index 0000000..b5de4e8
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/Network.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.class
 new file mode 100644
-index 0000000..8f06cb0
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/NetworkKt.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.class
 new file mode 100644
-index 0000000..aa9600a
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/RequestInterceptor.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.class
 new file mode 100644
-index 0000000..2155843
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/exoplayer/okhttp/ResponseInterceptor.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/BuildConfig.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/BuildConfig.class
 new file mode 100644
-index 0000000..e83d05c
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/BuildConfig.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/ReactVideoPackage.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/ReactVideoPackage.class
 new file mode 100644
-index 0000000..dd8faf9
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/react/ReactVideoPackage.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.class
 new file mode 100644
-index 0000000..950f4b8
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/AudioBecomingNoisyReceiver.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener$1.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener$1.class
 new file mode 100644
-index 0000000..500fccc
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener$1.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener.class b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener.class
 new file mode 100644
-index 0000000..95caa3b
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_dir/debug/com/brentvatne/receiver/BecomingNoisyListener.class differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_jar/debug/classes.jar b/node_modules/react-native-video/android-exoplayer/build/intermediates/runtime_library_classes_jar/debug/classes.jar
 new file mode 100644
 index 0000000..554b245
@@ -5087,7 +5022,7 @@ index 0000000..29d7f70
 +xml rn_dev_preferences
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab
 new file mode 100644
-index 0000000..f72a649
+index 0000000..b0af301
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream
 new file mode 100644
@@ -5103,7 +5038,7 @@ index 0000000..01bdaa1
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at
 new file mode 100644
-index 0000000..7a4107c
+index 0000000..a58b8ca
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i
 new file mode 100644
@@ -5115,27 +5050,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab
 new file mode 100644
-index 0000000..5048443
+index 0000000..a7b1c49
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream
 new file mode 100644
-index 0000000..d0554a2
+index 0000000..fc948b2
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len
 new file mode 100644
-index 0000000..773ca21
+index 0000000..4a25886
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len
 new file mode 100644
-index 0000000..fa606b6
+index 0000000..93a595b
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at
 new file mode 100644
-index 0000000..79e9c0b
+index 0000000..8f28327
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i
 new file mode 100644
-index 0000000..2efa22c
+index 0000000..7c407a7
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len
 new file mode 100644
@@ -5143,27 +5078,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab
 new file mode 100644
-index 0000000..bd6c101
+index 0000000..ea10198
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream
 new file mode 100644
-index 0000000..d0554a2
+index 0000000..fc948b2
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len
 new file mode 100644
-index 0000000..773ca21
+index 0000000..4a25886
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len
 new file mode 100644
-index 0000000..fa606b6
+index 0000000..93a595b
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at
 new file mode 100644
-index 0000000..4fba2bd
+index 0000000..e861548
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i
 new file mode 100644
-index 0000000..2efa22c
+index 0000000..7c407a7
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len
 new file mode 100644
@@ -5171,7 +5106,7 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab
 new file mode 100644
-index 0000000..2b61b7d
+index 0000000..266cb35
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream
 new file mode 100644
@@ -5187,7 +5122,7 @@ index 0000000..9e27f73
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at
 new file mode 100644
-index 0000000..ed43133
+index 0000000..43e0116
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i
 new file mode 100644
@@ -5197,49 +5132,9 @@ diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/comp
 new file mode 100644
 index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab
-new file mode 100644
-index 0000000..abbd63e
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream
-new file mode 100644
-index 0000000..fb6b6f3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len
-new file mode 100644
-index 0000000..87e907b
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len
-new file mode 100644
-index 0000000..93a595b
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values
-new file mode 100644
-index 0000000..6e10e85
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at
-new file mode 100644
-index 0000000..cc28664
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s
-new file mode 100644
-index 0000000..de9bb5c
---- /dev/null
-+++ b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s
-@@ -0,0 +1 @@
-+ûšÿ”å—
-\ No newline at end of file
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i
-new file mode 100644
-index 0000000..4fe9423
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i differ
-diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len
-new file mode 100644
-index 0000000..131e265
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab
 new file mode 100644
-index 0000000..7c504b0
+index 0000000..bdf584a
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream
 new file mode 100644
@@ -5255,7 +5150,7 @@ index 0000000..2a17e6e
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at
 new file mode 100644
-index 0000000..ebcda5a
+index 0000000..46d6744
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i
 new file mode 100644
@@ -5267,11 +5162,11 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab
 new file mode 100644
-index 0000000..d97387c
+index 0000000..46218cd
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream
 new file mode 100644
-index 0000000..cc93f7f
+index 0000000..a21724c
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len
 new file mode 100644
@@ -5283,11 +5178,11 @@ index 0000000..9e27f73
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at
 new file mode 100644
-index 0000000..f8863b4
+index 0000000..04b2b3c
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i
 new file mode 100644
-index 0000000..7bc6107
+index 0000000..e67f7c0
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len
 new file mode 100644
@@ -5295,27 +5190,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab
 new file mode 100644
-index 0000000..b3addcd
+index 0000000..a13de64
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream
 new file mode 100644
-index 0000000..b3711b0
+index 0000000..301ead0
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len
 new file mode 100644
-index 0000000..3ea618f
+index 0000000..5ca716f
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len
 new file mode 100644
-index 0000000..ec8f944
+index 0000000..01bdaa1
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at
 new file mode 100644
-index 0000000..ff766f8
+index 0000000..4978070
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i
 new file mode 100644
-index 0000000..fc2e5b1
+index 0000000..b044d8c
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len
 new file mode 100644
@@ -5323,27 +5218,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab
 new file mode 100644
-index 0000000..a1976df
+index 0000000..bdf584a
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream
 new file mode 100644
-index 0000000..244c9ac
+index 0000000..e93767e
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len
 new file mode 100644
-index 0000000..03695e1
+index 0000000..c2e8349
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len
 new file mode 100644
-index 0000000..6f677df
+index 0000000..2a17e6e
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at
 new file mode 100644
-index 0000000..d3c5b2f
+index 0000000..65056ca
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i
 new file mode 100644
-index 0000000..058c543
+index 0000000..9dbbd0e
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len
 new file mode 100644
@@ -5351,27 +5246,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab
 new file mode 100644
-index 0000000..4e92e46
+index 0000000..00c5c6d
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream
 new file mode 100644
-index 0000000..5018423
+index 0000000..4979005
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len
 new file mode 100644
-index 0000000..330ecdf
+index 0000000..181ee60
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len
 new file mode 100644
-index 0000000..9e27f73
+index 0000000..01bdaa1
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at
 new file mode 100644
-index 0000000..2ade6be
+index 0000000..53956de
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i
 new file mode 100644
-index 0000000..2dbfc7c
+index 0000000..582d0ab
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len
 new file mode 100644
@@ -5379,16 +5274,16 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
 new file mode 100644
-index 0000000..9153a30
+index 0000000..2ceb12b
 --- /dev/null
 +++ b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
 @@ -0,0 +1,2 @@
-+12
++2
 +0
 \ No newline at end of file
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab
 new file mode 100644
-index 0000000..fcaba65
+index 0000000..3a985e4
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream
 new file mode 100644
@@ -5404,7 +5299,7 @@ index 0000000..01bdaa1
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at
 new file mode 100644
-index 0000000..09947d1
+index 0000000..7d30a43
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i
 new file mode 100644
@@ -5416,27 +5311,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab
 new file mode 100644
-index 0000000..9fd139b
+index 0000000..8d83459
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream
 new file mode 100644
-index 0000000..82dcce2
+index 0000000..100d205
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len
 new file mode 100644
-index 0000000..1ff194f
+index 0000000..ccfcbf4
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len
 new file mode 100644
-index 0000000..a363176
+index 0000000..01bdaa1
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at
 new file mode 100644
-index 0000000..9da9294
+index 0000000..5668f72
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i
 new file mode 100644
-index 0000000..8452381
+index 0000000..f768a77
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len
 new file mode 100644
@@ -5444,27 +5339,27 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab
 new file mode 100644
-index 0000000..6478d1b
+index 0000000..4e30d67
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream
 new file mode 100644
-index 0000000..bb26f21
+index 0000000..bddbb06
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len
 new file mode 100644
-index 0000000..9b511a5
+index 0000000..431cf18
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len
 new file mode 100644
-index 0000000..749d1fc
+index 0000000..de31b63
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at
 new file mode 100644
-index 0000000..84f04d5
+index 0000000..0bcd471
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i
 new file mode 100644
-index 0000000..58c8c6c
+index 0000000..8c67d81
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len
 new file mode 100644
@@ -5472,11 +5367,11 @@ index 0000000..131e265
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/last-build.bin b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/last-build.bin
 new file mode 100644
-index 0000000..85ff2d8
+index 0000000..4d229ec
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/cacheable/last-build.bin differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/local-state/build-history.bin b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/local-state/build-history.bin
 new file mode 100644
-index 0000000..2340722
+index 0000000..77cd2c3
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/kotlin/compileDebugKotlin/local-state/build-history.bin differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-video/android-exoplayer/build/outputs/logs/manifest-merger-debug-report.txt
 new file mode 100644
@@ -5511,39 +5406,31 @@ index 0000000..26e1412
 +		INJECTED from /Users/ranveer/WebstormProjects/newatg/node_modules/react-native-video/android-exoplayer/src/main/AndroidManifest.xml
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/DataSourceUtil.class.uniqueId5 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/DataSourceUtil.class.uniqueId5
 new file mode 100644
-index 0000000..1f4d80f
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/DataSourceUtil.class.uniqueId5 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$1.class.uniqueId7 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$1.class.uniqueId7
 new file mode 100644
-index 0000000..97bf5b3
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$1.class.uniqueId7 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$2.class.uniqueId4 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$2.class.uniqueId4
 new file mode 100644
-index 0000000..57ae179
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$2.class.uniqueId4 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$3.class.uniqueId1 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$3.class.uniqueId1
 new file mode 100644
-index 0000000..e299600
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$3.class.uniqueId1 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$4.class.uniqueId6 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$4.class.uniqueId6
 new file mode 100644
-index 0000000..e7031e2
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$4.class.uniqueId6 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$5.class.uniqueId3 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$5.class.uniqueId3
 new file mode 100644
-index 0000000..2c41b85
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$5.class.uniqueId3 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$6.class.uniqueId0 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$6.class.uniqueId0
 new file mode 100644
-index 0000000..495e232
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView$6.class.uniqueId0 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView.class.uniqueId2 b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView.class.uniqueId2
 new file mode 100644
-index 0000000..bfe4193
-Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/ReactExoplayerView.class.uniqueId2 differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
 new file mode 100644
-index 0000000..660b82f
+index 0000000..84eb678
 Binary files /dev/null and b/node_modules/react-native-video/android-exoplayer/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
 diff --git a/node_modules/react-native-video/android-exoplayer/build/tmp/kotlin-classes/debug/META-INF/react-native-video_debug.kotlin_module b/node_modules/react-native-video/android-exoplayer/build/tmp/kotlin-classes/debug/META-INF/react-native-video_debug.kotlin_module
 new file mode 100644
@@ -5615,7 +5502,7 @@ index 19dda00..c12fb96 100644
          if (requestHeaders != null)
              okHttpDataSourceFactory.getDefaultRequestProperties().set(requestHeaders);
 diff --git a/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java b/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
-index fe95fdf..1d3c575 100644
+index fe95fdf..2039288 100644
 --- a/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
 +++ b/node_modules/react-native-video/android-exoplayer/src/main/java/com/brentvatne/exoplayer/ReactExoplayerView.java
 @@ -15,6 +15,9 @@ import android.view.accessibility.CaptioningManager;
@@ -5680,7 +5567,7 @@ index fe95fdf..1d3c575 100644
 @@ -184,6 +193,11 @@ class ReactExoplayerView extends FrameLayout implements
          }
      };
- 
+     
 +    public void setDrmConfig(String encryptedVideoKey, String authKey) {
 +        this.encryptedVideoKey = encryptedVideoKey;
 +        this.authKey = authKey;
