@@ -10,11 +10,11 @@ export const getImortantLinks = baseUrl + 'important_links';
 export const getMainVideos = baseUrl + 'get_main_videos';
 export const getKey = baseUrl + 'key_authentication';
 export const buyNow =
-    'https://awakenthegenius.org/awakenpanel/cn_website/buynow';
+    'https://junglebookpune.org/test_awaken_genius/cn_website/buynow';
 export const assesment =
-    'https://awakenthegenius.org/awakenpanel/website/cn_assessment_test/verify_user';
+    'https://junglebookpune.org/test_awaken_genius/website/cn_assessment_test/verify_user';
 export const strengthFinder =
-    'https://awakenthegenius.org/awakenpanel/cn_website/strength';
+    'https://junglebookpune.org/test_awaken_genius/cn_website/strength';
 
 export const faqs = 'https://awakenthegenius.org/awakenpanel/cn_website/faqs';
 export const website = 'https://awakenthegenius.org/awakenpanel/cn_website';

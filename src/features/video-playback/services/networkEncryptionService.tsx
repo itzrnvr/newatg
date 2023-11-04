@@ -1,7 +1,6 @@
-import axios, {AxiosResponse} from 'axios';
 import CryptoJS from 'react-native-crypto-js';
 import {NativeModules} from 'react-native';
-import {useDrmStore} from '../store';
+import axios from 'axios';
 
 const {RsaManager} = NativeModules;
 
@@ -11,17 +10,18 @@ const {RsaManager} = NativeModules;
 //     .catch((error: any) => console.error(error));
 
 // Define your secret key
-const secretKey: string = 'secretKey';
 
 // Function to encrypt the data
-function encryptWithAES(text: string): string {
+async function encryptWithAES(text: string) {
+    const secretKey: string = await RsaManager.getApiKey();
     const encryptedData = CryptoJS.AES.encrypt(text, secretKey).toString();
     console.log(encryptedData);
     return encryptedData;
 }
 
 // Function to decrypt the data
-function decryptWithAES(cipherText: string): string {
+async function decryptWithAES(cipherText: string) {
+    const secretKey: string = await RsaManager.getApiKey();
     const bytes = CryptoJS.AES.decrypt(cipherText, secretKey);
     const originalText = bytes.toString(CryptoJS.enc.Utf8);
     return originalText;
@@ -43,7 +43,7 @@ export const makeSecureRequest = async (video_id: string) => {
         video_id,
     };
 
-    const encryptedData: string = encryptWithAES(JSON.stringify(payload));
+    const encryptedData: string = await encryptWithAES(JSON.stringify(payload));
 
     const CloudflareWorkerUrl: string =
         'https://atg-service-encryption.saiyaman.workers.dev';
@@ -54,7 +54,7 @@ export const makeSecureRequest = async (video_id: string) => {
 
     console.log('encryptedData', encryptedResponseData);
 
-    const decryptedData: string = decryptWithAES(encryptedResponseData);
+    const decryptedData: string = await decryptWithAES(encryptedResponseData);
 
     console.log('decrypted: ', decryptedData); // logging the decrypted data
 

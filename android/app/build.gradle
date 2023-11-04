@@ -82,6 +82,17 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            version "3.22.1" // replace with your cmake version in your system
+            path file('src/main/cpp/CMakeLists.txt')
+        }
     }
     signingConfigs {
         debug {

@@ -1,5 +1,7 @@
 package com.awesomeproject.native_modules.rsa.key_manager
 
+import android.util.Log
+import com.awesomeproject.Secrets
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.Promise
@@ -13,6 +15,7 @@ class RsaManager(reactContext: ReactApplicationContext?) :
     private val keyModule: KeyModule = KeyModule()
 
     override fun getName(): String {
+        Log.d("getApiKeySecret", Secrets.getAPIKey())
         return "RsaManager"
     }
 
@@ -47,6 +50,12 @@ class RsaManager(reactContext: ReactApplicationContext?) :
 
         // This sends data back to React Native
         promise.resolve(returnedData)
+    }
+
+    @ReactMethod
+    fun getApiKey(promise: Promise){
+        Log.d("getApiKeySecret",Secrets.getAPIKey())
+        promise.resolve(Secrets.getAPIKey());
     }
 
 }

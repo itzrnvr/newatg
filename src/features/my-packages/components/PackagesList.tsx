@@ -3,6 +3,7 @@ import {FlatList, Text, View} from 'react-native';
 import PackageKeyList from './PackageKeyList';
 import {useEffect, useState} from 'react';
 import {Serial} from '../services/seriaKeyListStatusApiService';
+import {wait} from 'utils/misc';
 
 interface PackagesListProps {
     keys: Serial[];
@@ -34,10 +35,11 @@ const PackageCategory = ({
     );
 };
 
-const PackagesList = ({keys}: PackagesListProps) => {
+const PackagesList = ({keys, onRefresh}: PackagesListProps) => {
     const [packageCategories, setPackageCategories] = useState<
         PackageCategory[]
     >([]);
+    const [isRefreshing, setIsRefreshing] = useState(false);
 
     useEffect(() => {
         let activePackages: Serial[] = [];
@@ -77,15 +79,25 @@ const PackagesList = ({keys}: PackagesListProps) => {
         ]);
     }, [keys]);
 
+    const requestRefresh = async () => {
+        setIsRefreshing(true);
+        await onRefresh();
+        await wait(500);
+        setIsRefreshing(false);
+    };
+
     return (
         <View>
             <FlatList
+                refreshing={isRefreshing}
+                onRefresh={requestRefresh}
                 data={packageCategories}
                 renderItem={({item}) =>
                     PackageCategory({
                         packageCategory: item,
                     })
                 }
+                onRefresh={() => onRefresh()}
             />
         </View>
     );

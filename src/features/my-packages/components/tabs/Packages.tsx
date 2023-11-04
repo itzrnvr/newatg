@@ -1,4 +1,4 @@
-import {View} from 'react-native';
+import {Alert, Text, View} from 'react-native';
 import usePackagesViewModel from './viewModels/usePackagesViewModel';
 import React, {useEffect, useState} from 'react';
 import LoadingModal from '../../../../components/LoadingModal';
@@ -12,6 +12,8 @@ import {makeSecureRequest} from '../../../video-playback/services/networkEncrypt
 import {useDrmStore} from '../../../video-playback/store';
 import {ScreenContainer} from '../../../../layouts/ScreenContainer';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {TouchableNativeFeedback} from 'react-native-gesture-handler';
+import Clipboard from '@react-native-community/clipboard';
 
 const PackagesScreen = ({
     route,
@@ -38,6 +40,10 @@ const PackagesScreen = ({
         });
     };
 
+    const copyToClipboard = (textToCopy: string) => {
+        Clipboard.setString(textToCopy);
+    };
+
     const fetchEncryptedKey = async (item: VideoDetails) => {
         setLoading(true);
         setKeys('', '');
@@ -47,7 +53,6 @@ const PackagesScreen = ({
                 item.video_id,
             );
             setKeys(authKey, privateKey);
-            setLoading(false);
             setCurrentVideoItem(item);
             console.log('keysSet');
         } catch (e) {
@@ -66,10 +71,12 @@ const PackagesScreen = ({
             navigation.navigate('VideoPlayback', {
                 videoDetails: currentVideoItem,
             });
+            setLoading(false);
         }
     }, [currentVideoItem]);
 
     useEffect(() => {
+        setLoading(false);
         viewModel.fetchMainVideos();
         setKeys('', '');
     }, []);
@@ -122,6 +129,14 @@ const PackagesScreen = ({
                     packages={videos}
                     onRefresh={viewModel.fetchMainVideos}
                 />
+
+                <TouchableNativeFeedback
+                    onPress={() => copyToClipboard(key.serial_key)}
+                    className={'justify-center items-center mt-8'}>
+                    <Text className={'text-gray-400 text-sm font-light'}>
+                        Serial Key: {key.serial_key}
+                    </Text>
+                </TouchableNativeFeedback>
             </View>
         </ScreenContainer>
     );

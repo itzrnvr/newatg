@@ -34,7 +34,7 @@ const PackageList = ({packages, onRefresh, onPress}: PackageListProps) => {
     const requestRefresh = async () => {
         setIsRefreshing(true);
         await onRefresh();
-        wait(500);
+        await wait(500);
         setIsRefreshing(false);
     };
 

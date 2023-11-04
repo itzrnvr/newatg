@@ -12,7 +12,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Slider from '@react-native-community/slider';
 import {useNavigation} from '@react-navigation/native';
 import * as buffer from 'buffer';
-import {formatSeconds} from "utils/misc";
+import {formatSeconds} from 'utils/misc';
 
 interface SecurePlayerControlsProps {
     title: string;
@@ -62,7 +62,7 @@ const SecurePlayerControls = ({
     };
 
     const handlePlayPause = () => {
-        if(finished){
+        if (finished) {
             setFinished(false);
             handleProgressChange(0);
             setPlaying(true);
@@ -86,7 +86,10 @@ const SecurePlayerControls = ({
             onPause?.();
         }
 
-        if (Math.round(currentTime) === Math.round(duration) && Math.round(duration) !== 0) {
+        if (
+            Math.round(currentTime) === Math.round(duration) &&
+            Math.round(duration) !== 0
+        ) {
             setPlaying(false);
             console.log('finished');
             setFinished(true);
@@ -111,6 +114,14 @@ const SecurePlayerControls = ({
         );
         return unsubscribe;
     }, [navigation]);
+
+    useEffect(() => {
+        if (buffering) {
+            setControlsVisible(true);
+        } else {
+            setControlsVisible(false);
+        }
+    }, [buffering]);
 
     return (
         <TouchableWithoutFeedback

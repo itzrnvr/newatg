@@ -19,51 +19,50 @@ type SerialKeyListResponse = {
     serial_list: Serial[];
 };
 
-export const fetchSerialKeyStatusList =
-    (macId: string): APIResponse<SerialKeyListResponse> => {
-        let successCallback: (data: SerialKeyListResponse) => void = () => {};
-        let errorCallback: (error: any) => void = () => {};
+export const fetchSerialKeyStatusList = (
+    macId: string,
+): APIResponse<SerialKeyListResponse> => {
+    let successCallback: (data: SerialKeyListResponse) => void = () => {};
+    let errorCallback: (error: any) => void = () => {};
 
-        const result: APIResponse<SerialKeyListResponse> = {
-            error(
-                callback: (error: any) => void,
-            ): APIResponse<SerialKeyListResponse> {
-                errorCallback = callback;
-                return result;
-            },
-            success(
-                callback: (data: SerialKeyListResponse) => void,
-            ): APIResponse<SerialKeyListResponse> {
-                successCallback = callback;
-                return result;
-            },
-        };
-
-        axios({
-            method: 'post',
-            url: getSerialKeyList,
-            params: {
-                mac_id: macId,
-            },
-        })
-            .then(response => {
-                if (
-                    response.data.response !== 400 &&
-                    response.data.response === 200
-                ) {
-                    console.log(response.data);
-                    successCallback(response.data);
-                } else {
-                    console.log('Error');
-                    console.log(response.data);
-                    throw new Error(
-                        `HTTP error! status: ${response.data.status}`,
-                    );
-                }
-            })
-            .catch((error: any) => {
-                errorCallback(error);
-            });
-
-        return result;
+    const result: APIResponse<SerialKeyListResponse> = {
+        error(
+            callback: (error: any) => void,
+        ): APIResponse<SerialKeyListResponse> {
+            errorCallback = callback;
+            return result;
+        },
+        success(
+            callback: (data: SerialKeyListResponse) => void,
+        ): APIResponse<SerialKeyListResponse> {
+            successCallback = callback;
+            return result;
+        },
     };
+
+    axios({
+        method: 'post',
+        url: getSerialKeyList,
+        params: {
+            mac_id: macId,
+        },
+    })
+        .then(response => {
+            if (
+                response.data.response !== 400 &&
+                response.data.response === 200
+            ) {
+                console.log(response.data);
+                successCallback(response.data);
+            } else {
+                console.log('Error');
+                console.log(response.data);
+                throw new Error(`HTTP error! status: ${response.data.status}`);
+            }
+        })
+        .catch((error: any) => {
+            errorCallback(error);
+        });
+
+    return result;
+};
