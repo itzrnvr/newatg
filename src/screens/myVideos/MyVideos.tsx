@@ -16,38 +16,28 @@ import {fetchMainVideos} from '../../features/my-packages/services/myPackagesApi
 import {fetchSerialKeyList} from '../../features/my-packages/services/seriaKeyListApiService';
 import {fetchSerialKeyStatusList} from '../../features/my-packages/services/seriaKeyListStatusApiService';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {StackParamList} from '../../../App';
 
-function MyPackages() {
+const MyVideos = ({
+    route,
+}: NativeStackScreenProps<StackParamList, 'MyVideos'>) => {
+    const {key} = route.params;
     const viewModel = usePackagesViewModel();
     const navigation = useNavigation();
 
     useEffect(() => {
-        viewModel.fetchKeyStatusList();
+        navigation.setOptions({title: key.title});
+        viewModel.fetchMainVideos();
     }, []);
-
-    useEffect(() => {
-        console.log(viewModel.keyClickType);
-        console.log('hello');
-        if (viewModel.keyClickType) {
-            const key = viewModel.keyClickType.key;
-            navigation.navigate('MyVideos', {key: key});
-            viewModel.resetKeyClickType();
-        }
-    }, [viewModel.keyClickType]);
 
     return (
         <ScreenContainer
             statusBarBackgroundColor={'#ffffff'}
             loading={viewModel.keyStatusLoading}>
-            <View className={'mt-2 bg-white'}>
-                <PackagesList
-                    keys={viewModel.keys}
-                    onPress={() => console.log('onPress')}
-                    onRefresh={() => console.log('onRefresh')}
-                />
-            </View>
+            <TabsMyPackages serial={key} />
         </ScreenContainer>
     );
-}
+};
 
-export default MyPackages;
+export default MyVideos;

@@ -1,4 +1,4 @@
-import {getMainVideos} from 'utils/Constants';
+import {getMainVideos, getSerialKeyList} from 'utils/Constants';
 import axios from 'axios';
 
 export interface VideoDetails {

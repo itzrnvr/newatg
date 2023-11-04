@@ -28,6 +28,7 @@
     "axios": "^1.5.1",
     "axios-retry": "^3.8.1",
     "deprecated-react-native-prop-types": "^4.2.1",
+    "m3u8-parser": "^7.1.0",
     "nativewind": "^2.0.11",
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0",

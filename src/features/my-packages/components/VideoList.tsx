@@ -39,7 +39,7 @@ const VideoList = ({videos, onPress}: VideoListProps) => {
                     },
                 })
             }
-            keyExtractor={item => item.title}
+            keyExtractor={(item, index) => index + ''}
         />
     );
 };

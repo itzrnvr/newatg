@@ -4,16 +4,19 @@ import React, {useEffect, useState} from 'react';
 import LoadingModal from '../../../../components/LoadingModal';
 import PrimaryButton from '../../../activate-keys/components/PrimaryButton';
 import Toast from 'react-native-toast-message';
-import PackagesList from '../PackagesList';
-import {VideoDetails} from '../../services/myPackagesApiService';
+import PackageList from '../PackageList';
+import {Package, VideoDetails} from '../../services/myPackagesApiService';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {StackParamList} from '../../../../../App';
 import {makeSecureRequest} from '../../../video-playback/services/networkEncryptionService';
 import {useDrmStore} from '../../../video-playback/store';
-import {it} from '@jest/globals';
 import {ScreenContainer} from '../../../../layouts/ScreenContainer';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-function PackagesScreen() {
+const PackagesScreen = ({
+    route,
+}: NativeStackScreenProps<StackParamList, 'Packages'>) => {
+    const {key} = route.params;
     const viewModel = usePackagesViewModel();
     const navigation = useNavigation<NavigationProp<StackParamList>>();
     const {encryptedVideoKey, authKey, setKeys} = useDrmStore();
@@ -21,6 +24,8 @@ function PackagesScreen() {
         useState<VideoDetails | null>(null);
 
     const [loading, setLoading] = useState(false);
+
+    const [videos, setVideos] = useState<Package[]>([]);
 
     const errorToast = (
         title: string = 'Something went wrong',
@@ -76,6 +81,19 @@ function PackagesScreen() {
         }
     }, [viewModel.error]);
 
+    useEffect(() => {
+        console.log('PACKAGES', key?.serial_key);
+        setVideos(
+            viewModel.packages.filter(
+                item => item.serial_key === key?.serial_key,
+            ),
+        );
+    }, [viewModel.packages]);
+
+    useEffect(() => {
+        console.log(videos);
+    }, [videos]);
+
     if (viewModel.loading) {
         return <LoadingModal isLoading={viewModel.loading} />;
     }
@@ -97,16 +115,16 @@ function PackagesScreen() {
     return (
         <ScreenContainer loading={loading}>
             <View className={'w-full pr-0.5'}>
-                <PackagesList
+                <PackageList
                     onPress={(item: VideoDetails) =>
                         handleOnPackageItemClick(item)
                     }
-                    packages={viewModel.packages}
+                    packages={videos}
                     onRefresh={viewModel.fetchMainVideos}
                 />
             </View>
         </ScreenContainer>
     );
-}
+};
 
 export default PackagesScreen;

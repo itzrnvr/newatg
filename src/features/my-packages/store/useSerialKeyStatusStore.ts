@@ -2,44 +2,58 @@ import {create} from 'zustand';
 import {persist, createJSONStorage} from 'zustand/middleware';
 import zustandStorage from '../../../utils/zustandStorage';
 import {isNetworkAvailable} from 'utils/networkState';
-import {fetchMainVideos, Package} from '../services/myPackagesApiService';
-import {getMacID} from '../../../services/SessionManagerService';
+import {
+    fetchSerialKeyStatusList,
+    Serial,
+} from '../services/seriaKeyListStatusApiService';
 
-export type State = {
-    packages: Package[];
-    loading: boolean;
-    error: Error | null;
-    resetError: () => void;
-    fetchMainVideos: () => void;
+export type KeyClickType = {
+    type: string | null;
+    key: Serial | null;
 };
 
-export const useMainVideosRemoteStore = create(
+export type State = {
+    keys: Serial[];
+    keyClickType: KeyClickType | null;
+    onItemClick: (keyClickType: KeyClickType) => void;
+    resetError: () => void;
+    loading: boolean;
+    error: Error | null;
+    resetKeyClickType: () => void;
+    fetchKeyStatusList: () => void;
+};
+
+export const useSerialKeyStatusStore = create(
     persist<State>(
         set => ({
-            packages: [],
+            keys: [],
             loading: true,
             error: null,
-
-            fetchMainVideos: () => {
+            keyClickType: {type: null, key: null},
+            onItemClick: (keyClickType: KeyClickType) =>
+                set({keyClickType: keyClickType}),
+            fetchKeyStatusList: () => {
                 set({error: null, loading: true});
                 isNetworkAvailable
                     .yes(async () => {
-                        console.log('fetch main vieos', 'CONNECTED');
-                        fetchMainVideos('4129E2A0-D92E-48EE-B493-83D65DEA5436')
+                        console.log('fetch key status list', 'CONNECTED');
+                        fetchSerialKeyStatusList(
+                            '4129E2A0-D92E-48EE-B493-83D65DEA5436',
+                        )
                             .success(response => {
                                 console.log(response);
                                 set({
-                                    packages: response?.video_list,
+                                    keys: response?.serial_list,
                                     loading: false,
                                 }); // Stop loading when data is fetched
                             })
                             .error(error => {
                                 set({loading: false});
                                 set({
-                                    error: Error('Failed fetching Main Videos'),
+                                    error: Error('Failed fetching Key Status'),
                                 });
                                 console.log(
-                                    'Failed fetching Main Videos: ',
+                                    'Failed fetching Keys Status: ',
                                     error.message,
                                 );
                             });
@@ -52,9 +66,12 @@ export const useMainVideosRemoteStore = create(
             resetError: () => {
                 set({error: null});
             },
+            resetKeyClickType: () => {
+                set({keyClickType: null});
+            },
         }),
         {
-            name: 'mainVideosRemoteStore', // unique name
+            name: 'serialKeyStatusStore', // unique name
             storage: createJSONStorage(() => zustandStorage), // (optional) by default, 'localStorage' is used
         },
     ),

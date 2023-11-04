@@ -1,56 +1,93 @@
+import {VideoDetails} from '../services/myPackagesApiService';
 import {FlatList, Text, View} from 'react-native';
-import React, {useState} from 'react';
-import {Package, VideoDetails} from '../services/myPackagesApiService';
-import VideoList from './VideoList';
-import {wait} from 'utils/misc';
+import PackageKeyList from './PackageKeyList';
+import {useEffect, useState} from 'react';
+import {Serial} from '../services/seriaKeyListStatusApiService';
 
-type PackagesListProps = {
-    packages: Package[];
+interface PackagesListProps {
+    keys: Serial[];
     onRefresh: () => void;
     onPress: (item: VideoDetails) => void;
+}
+
+type CategoryName = 'Active' | 'Available' | 'Expired';
+interface PackageCategory {
+    categoryName: CategoryName;
+    keys: Serial[];
+}
+
+const PackageCategory = ({
+    packageCategory,
+}: {
+    packageCategory: PackageCategory;
+}) => {
+    return (
+        <View>
+            <Text className={'text-black text-lg font-bold mx-4 my-1.5'}>
+                {packageCategory.categoryName}
+            </Text>
+            <PackageKeyList
+                categoryName={packageCategory.categoryName}
+                keys={packageCategory.keys}
+            />
+        </View>
+    );
 };
 
-const renderItem = ({
-    item,
-    onPress,
-}: {
-    item: Package;
-    onPress: (item: VideoDetails) => void;
-}) => (
-    <View className={'w-full'}>
-        <View className={'mb-4 bg-blue-800 mt-2 rounded-lg w-full py-4 items-center'}>
-            <Text className={'text-white font-bold text-xl'}>{item.title}</Text>
-        </View>
+const PackagesList = ({keys}: PackagesListProps) => {
+    const [packageCategories, setPackageCategories] = useState<
+        PackageCategory[]
+    >([]);
 
-        <VideoList videos={item.data} onPress={onPress} />
-    </View>
-);
-const PackagesList = ({packages, onRefresh, onPress}: PackagesListProps) => {
-    const [isRefreshing, setIsRefreshing] = useState(false);
+    useEffect(() => {
+        let activePackages: Serial[] = [];
+        let availablePackages: Serial[] = [];
+        let expiredPackages: Serial[] = [];
 
-    const requestRefresh = async () => {
-        setIsRefreshing(true);
-        await onRefresh();
-        wait(500);
-        setIsRefreshing(false);
-    };
+        keys.forEach(key => {
+            switch (key.serial_key_status) {
+                case 'Active':
+                    activePackages.push(key);
+                    break;
+                case 'Pending':
+                    availablePackages.push(key);
+                    expiredPackages.push(key);
+                    break;
+                case 'Expired':
+                    expiredPackages.push(key);
+                    break;
+                default:
+                    console.log('Unrecognised Key');
+            }
+        });
+
+        setPackageCategories([
+            {
+                categoryName: 'Active',
+                keys: activePackages,
+            },
+            {
+                categoryName: 'Available',
+                keys: availablePackages,
+            },
+            {
+                categoryName: 'Expired',
+                keys: expiredPackages,
+            },
+        ]);
+    }, [keys]);
 
     return (
-        <FlatList
-            refreshing={isRefreshing}
-            onRefresh={requestRefresh}
-            showsVerticalScrollIndicator={false}
-            data={packages}
-            renderItem={({item}) =>
-                renderItem({
-                    item,
-                    onPress: item => {
-                        onPress(item);
-                    },
-                })
-            }
-            keyExtractor={item => item.title}
-        />
+        <View>
+            <FlatList
+                data={packageCategories}
+                renderItem={({item}) =>
+                    PackageCategory({
+                        packageCategory: item,
+                    })
+                }
+            />
+        </View>
     );
 };
 

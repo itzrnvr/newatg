@@ -11,6 +11,8 @@ import {VideoDetails} from './src/features/my-packages/services/myPackagesApiSer
 import WebScreen from './src/screens/webview/WebScreen';
 import SplashScreen from './src/screens/onboarding/SplashScreen';
 import OnBoardingScreen from './src/screens/onboarding/OnBoardingScreen';
+import MyVideos from "./src/screens/myVideos/MyVideos";
+import {Serial} from "./src/features/my-packages/services/seriaKeyListStatusApiService";
 
 export type StackParamList = {
     SplashScreen: undefined;
@@ -18,6 +20,8 @@ export type StackParamList = {
     Home: undefined;
     ActivateKeys: undefined;
     MyPackages: undefined;
+    MyVideos: {key: Serial};
+    Packages: {key: Serial};
     VideoPlayback: {videoDetails: VideoDetails};
     WebScreen: {uri: string};
 };
@@ -55,6 +59,11 @@ const App = () => {
                         name="MyPackages"
                         component={MyPackages}
                         options={{title: 'My Packages'}}
+                    />
+
+                    <Stack.Screen
+                        name="MyVideos"
+                        component={MyVideos}
                     />
 
                     <Stack.Screen
