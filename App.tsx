@@ -11,8 +11,10 @@ import {VideoDetails} from './src/features/my-packages/services/myPackagesApiSer
 import WebScreen from './src/screens/webview/WebScreen';
 import SplashScreen from './src/screens/onboarding/SplashScreen';
 import OnBoardingScreen from './src/screens/onboarding/OnBoardingScreen';
-import MyVideos from "./src/screens/myVideos/MyVideos";
-import {Serial} from "./src/features/my-packages/services/seriaKeyListStatusApiService";
+import MyVideos from './src/screens/myVideos/MyVideos';
+import {Serial} from './src/features/my-packages/services/seriaKeyListStatusApiService';
+import {createMaterialBottomTabNavigator} from 'react-native-paper/react-navigation';
+import BottomTabNavigator from "./src/components/BottomTabNavigator";
 
 export type StackParamList = {
     SplashScreen: undefined;
@@ -38,7 +40,6 @@ const App = () => {
                         component={SplashScreen}
                         options={{headerShown: false}}
                     />
-
                     <Stack.Screen
                         name="OnBoarding"
                         component={OnBoardingScreen}
@@ -46,24 +47,9 @@ const App = () => {
                     />
 
                     <Stack.Screen
-                        name="Home"
-                        component={Home}
+                        name="Home" // Changed to HomeTabs to avoid name conflict
+                        component={Home} // Use the BottomTabNavigator we defined earlier
                         options={{headerShown: false}}
-                    />
-                    <Stack.Screen
-                        name="ActivateKeys"
-                        component={ActivateKeys}
-                        options={{title: 'Activate Keys'}}
-                    />
-                    <Stack.Screen
-                        name="MyPackages"
-                        component={MyPackages}
-                        options={{title: 'My Packages'}}
-                    />
-
-                    <Stack.Screen
-                        name="MyVideos"
-                        component={MyVideos}
                     />
 
                     <Stack.Screen
@@ -76,6 +62,24 @@ const App = () => {
                         name="WebScreen"
                         component={WebScreen}
                         options={{headerShown: false}}
+                    />
+                    <Stack.Screen
+                        name="ActivateKeys"
+                        component={ActivateKeys}
+                        options={{
+                            headerShown: true,
+                            headerTitle: 'Activate Keys Title',
+                        }}
+                    />
+                    <Stack.Screen
+                        name="MyPackages"
+                        component={MyPackages}
+                        options={{title: 'My Packages'}}
+                    />
+                    <Stack.Screen
+                        name="MyVideos"
+                        component={MyVideos}
+                        options={{title: 'My Videos'}}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
