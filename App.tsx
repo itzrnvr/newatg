@@ -15,12 +15,14 @@ import MyVideos from './src/screens/myVideos/MyVideos';
 import {Serial} from './src/features/my-packages/services/seriaKeyListStatusApiService';
 import {createMaterialBottomTabNavigator} from 'react-native-paper/react-navigation';
 import BottomTabNavigator from "./src/components/BottomTabNavigator";
+import Profile from "./src/screens/profile/Profile";
 
 export type StackParamList = {
     SplashScreen: undefined;
     OnBoarding: undefined;
     Home: undefined;
     ActivateKeys: undefined;
+    Profile: undefined;
     MyPackages: undefined;
     MyVideos: {key: Serial};
     Packages: {key: Serial};
@@ -70,6 +72,11 @@ const App = () => {
                             headerShown: true,
                             headerTitle: 'Activate Keys Title',
                         }}
+                    />
+                    <Stack.Screen
+                        name="Profile"
+                        component={Profile}
+                        options={{title: 'My Profile'}}
                     />
                     <Stack.Screen
                         name="MyPackages"

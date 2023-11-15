@@ -26,9 +26,7 @@ const HeaderHome = () => {
                     iconSize={40}
                     color="black"
                     padding={0}
-                    onPress={() =>
-                        navigation.navigate('WebScreen', {uri: faqs})
-                    }
+                    onPress={() => navigation.navigate('Profile')}
                 />
             </View>
         </View>
