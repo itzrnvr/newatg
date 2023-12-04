@@ -18,3 +18,32 @@ export function formatSeconds(seconds: number): string {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
+
+export function hexToRGBA(hex, alpha = 1) {
+    // Remove the hash at the start if it's there
+    hex = hex.replace('#', '');
+
+    // Parse the hex string into r, g, b
+    let r, g, b;
+
+    // Support three-character hex strings
+    if (hex.length === 3) {
+        r = parseInt(hex.charAt(0).repeat(2), 16);
+        g = parseInt(hex.charAt(1).repeat(2), 16);
+        b = parseInt(hex.charAt(2).repeat(2), 16);
+    }
+    // Support six-character hex strings
+    else if (hex.length === 6) {
+        r = parseInt(hex.substring(0, 2), 16);
+        g = parseInt(hex.substring(2, 4), 16);
+        b = parseInt(hex.substring(4, 6), 16);
+    } else {
+        throw new Error('Invalid HEX color.');
+    }
+
+    // Clamp and parse the alpha value to a number
+    alpha = Math.max(0, Math.min(1, parseFloat(alpha)));
+
+    // Return the RGBA color string
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}

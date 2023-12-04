@@ -5,6 +5,7 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import {Text, View} from 'react-native';
 import Icon from 'react-native-remix-icon';
 import {KeyClickType} from '../store/useSerialKeyStatusStore';
+import tailwindColorMap from 'utils/tailwindColors';
 
 const PackageKeyItem = ({
     categoryName,
@@ -15,7 +16,6 @@ const PackageKeyItem = ({
     item: Serial;
     onItemClick: (keyClickType: KeyClickType) => void;
 }) => {
-
     return (
         <TouchableNativeFeedback
             className={'my-2'}
@@ -46,6 +46,42 @@ const PackageKeyItem = ({
                 </View>
                 <Text className={'text-lg font-light text-white'}>
                     {categoryName}
+                </Text>
+            </View>
+        </TouchableNativeFeedback>
+    );
+};
+
+export const PackageKeyItem2 = ({
+    categoryName,
+    item,
+    onItemClick,
+}: {
+    categoryName: string;
+    item: Serial;
+    onItemClick: (keyClickType: KeyClickType) => void;
+}) => {
+    const iconBackgroundColor = tailwindColorMap.purple[100];
+    const iconColor = tailwindColorMap.purple[500];
+    return (
+        <TouchableNativeFeedback
+            className={'m-4 rounded-lg border-slate-600 border p-3.5 flex-row'}
+            onPress={() => onItemClick({type: categoryName, key: item})}>
+            <View
+                style={{backgroundColor: iconBackgroundColor}}
+                className={`p-3 self-start rounded-lg`}>
+                <Icon name={`ri-video-line`} size={36} color={iconColor} />
+            </View>
+            <View className={'justify-center'}>
+                <Text
+                    style={{fontFamily: 'RobotoSlab-SemiBold'}}
+                    className={'text-zinc-500 mt-4 text-[16px] w-28'}>
+                    {item.title}
+                </Text>
+                <Text
+                    style={{fontFamily: 'Lato-Regular'}}
+                    className={'mt-1 text-zinc-500 text-md '}>
+                    Access all your activated packages here.
                 </Text>
             </View>
         </TouchableNativeFeedback>

@@ -4,6 +4,7 @@ import PackageKeyList from './PackageKeyList';
 import {useEffect, useState} from 'react';
 import {Serial} from '../services/seriaKeyListStatusApiService';
 import {wait} from 'utils/misc';
+import {PackageKeyItem2} from './PackageKeyItem';
 
 interface PackagesListProps {
     keys: Serial[];
@@ -27,7 +28,7 @@ const PackageCategory = ({
             <Text className={'text-black text-lg font-bold mx-4 my-1.5'}>
                 {packageCategory.categoryName}
             </Text>
-            <PackageKeyList
+            <PackageKeyItem2
                 categoryName={packageCategory.categoryName}
                 keys={packageCategory.keys}
             />

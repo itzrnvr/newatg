@@ -7,12 +7,12 @@ import {
     TouchableWithoutFeedback,
     View,
 } from 'react-native';
-import TouchableIcon from '../TouchableIcon';
 import React, {useEffect, useRef, useState} from 'react';
 import Slider from '@react-native-community/slider';
 import {useNavigation} from '@react-navigation/native';
 import * as buffer from 'buffer';
 import {formatSeconds} from 'utils/misc';
+import TouchableIcon from "../../../../components/TouchableIcon";
 
 interface SecurePlayerControlsProps {
     title: string;

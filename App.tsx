@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Home} from './src/screens/home/Home';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
@@ -14,13 +14,18 @@ import OnBoardingScreen from './src/screens/onboarding/OnBoardingScreen';
 import MyVideos from './src/screens/myVideos/MyVideos';
 import {Serial} from './src/features/my-packages/services/seriaKeyListStatusApiService';
 import {createMaterialBottomTabNavigator} from 'react-native-paper/react-navigation';
-import BottomTabNavigator from "./src/components/BottomTabNavigator";
-import Profile from "./src/screens/profile/Profile";
+import BottomTabNavigator from './src/components/BottomTabNavigator';
+import Profile from './src/screens/profile/Profile';
+import Index from './src/screens/NewHome';
+import {useAppStore} from './src/store/appStore';
+import NavigationComponent from "./src/navigation/NavigationComponent";
 
 export type StackParamList = {
     SplashScreen: undefined;
     OnBoarding: undefined;
     Home: undefined;
+    Index: undefined;
+    NavigationComponent: undefined;
     ActivateKeys: undefined;
     Profile: undefined;
     MyPackages: undefined;
@@ -32,6 +37,21 @@ export type StackParamList = {
 
 const App = () => {
     const Stack = createNativeStackNavigator();
+    const {error} = useAppStore();
+
+    const errorToast = (message: string = 'There seems to be a problem') => {
+        Toast.show({
+            type: 'error',
+            text1: 'Something went wrong',
+            text2: message,
+        });
+    };
+
+    useEffect(() => {
+        if (error) {
+            errorToast(error);
+        }
+    }, [error]);
 
     return (
         <GestureHandlerRootView style={{flex: 1}}>
@@ -49,8 +69,20 @@ const App = () => {
                     />
 
                     <Stack.Screen
-                        name="Home" // Changed to HomeTabs to avoid name conflict
+                        name="Home"
                         component={Home} // Use the BottomTabNavigator we defined earlier
+                        options={{headerShown: false}}
+                    />
+
+                    <Stack.Screen
+                        name="NavigationComponent"
+                        component={NavigationComponent}
+                        options={{headerShown: false}}
+                    />
+
+                    <Stack.Screen
+                        name="NewHome"
+                        component={Index}
                         options={{headerShown: false}}
                     />
 

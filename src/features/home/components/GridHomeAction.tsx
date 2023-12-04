@@ -10,6 +10,7 @@ import VideoPlayback from '../../../screens/videoPlayback/VideoPlayback';
 import {baseUrl, buyNow, website} from 'utils/Constants';
 import webScreen from '../../../screens/webview/WebScreen';
 import {useHomeInteractiveEventsStore} from '../store/homeInteractiveEventsStore';
+import GridList from "./GridList";
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -122,17 +123,10 @@ const GridHomeAction = () => {
                 </TouchableNativeFeedback>
             </View>
             <View className={'mt-2 w-full justify-center items-center'}>
-                <FlatList
-                    data={data}
-                    renderItem={({item}) =>
-                        renderItem({item, onPress: handleItemClick, scrolling})
-                    }
-                    keyExtractor={item => item.key}
-                    numColumns={numColumns}
-                />
+                <GridList />
             </View>
 
-            <View className={'rounded-2xl mb-16 mx-4 h-20 mt-24'}>
+            <View className={'rounded-2xl mb-16 mx-4 h-20 mt-14'}>
                 <TouchableNativeFeedback
                     disabled={scrolling}
                     onPress={() =>

@@ -53,8 +53,8 @@ const OnBoardingScreen: React.FC<OnBoardingScreenProp> = ({navigation}) => {
             NextButtonComponent={Next}
             DoneButtonComponent={Done}
             DotComponent={Dots}
-            onSkip={() => navigation.replace('Home')}
-            onDone={() => navigation.navigate('Home')}
+            onSkip={() => navigation.replace('NewHome')}
+            onDone={() => navigation.navigate('NewHome')}
             pages={[
                 {
                     backgroundColor: '#3b82f6',

@@ -7,7 +7,7 @@ import {StackParamList} from '../../../../App';
 import TouchableIcon from "../../../components/TouchableIcon";
 
 const HeaderHome = () => {
-    const navigation = useNavigation<NavigationProp<StackParamList>>();
+    const navigation = useNavigation();
 
     return (
         <View

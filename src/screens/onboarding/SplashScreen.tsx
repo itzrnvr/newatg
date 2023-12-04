@@ -13,7 +13,7 @@ const storage = new MMKV();
 const SplashScreen: React.FC<SplashScreenProp> = ({navigation}) => {
     const handleOnPress = () => {
         if (storage.getBoolean('firstStart')) {
-            navigation.navigate('Home');
+            navigation.navigate('NavigationComponent');
         } else {
             storage.set('firstStart', true);
             navigation.navigate('OnBoarding');

@@ -1,13 +1,10 @@
-import {Text, View} from 'react-native';
-import Icon from 'react-native-remix-icon';
+import {View, Text} from 'react-native';
 import React from 'react';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {faqs} from 'utils/Constants';
-import {StackParamList} from '../../../../App';
-import TouchableIcon from "../../../components/TouchableIcon";
+import TouchableIcon from '../../../components/TouchableIcon';
+import {useNavigation} from '@react-navigation/native';
 
-const HeaderHome = () => {
-    const navigation = useNavigation<NavigationProp<StackParamList>>();
+const Header = () => {
+    const navigation = useNavigation();
 
     return (
         <View
@@ -33,4 +30,4 @@ const HeaderHome = () => {
     );
 };
 
-export default HeaderHome;
+export default Header;
