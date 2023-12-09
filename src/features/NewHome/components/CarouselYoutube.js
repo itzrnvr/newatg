@@ -32,7 +32,7 @@ const CarouselItem = ({item}) => {
     );
 };
 
-const Carousel = ({data = []}) => {
+const CarouselYoutube = ({data = []}) => {
     return (
         <View className={'px-3 mt-8 h-[300px]'} style={styles.mainContainer}>
             <View className={'mb-2 flex-row items-center'}>
@@ -65,7 +65,7 @@ const Carousel = ({data = []}) => {
     );
 };
 
-export default Carousel;
+export default CarouselYoutube;
 
 const styles = StyleSheet.create({
     mainContainer: {

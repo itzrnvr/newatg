@@ -19,11 +19,11 @@ export default function NavigationComponent() {
         };
     };
 
-    const createTabBarIcon = iconName => {
+    const createTabBarIcon = (iconName, onFocusIcon) => {
         return ({focused, color, size}) => (
             <Icon
-                name={iconName}
-                size={focused ? 34 : 30} // You can adjust the size based on your design needs
+                name={focused ? onFocusIcon : iconName}
+                size={focused ? 36 : 30} // You can adjust the size based on your design needs
                 color={focused ? color : tailwindColorMap.slate['500']}
             />
         );
@@ -43,8 +43,7 @@ export default function NavigationComponent() {
                         className={'rounded-2xl'}
                         rippleColor={hexToRGBA(tailwindColorMap.blue[300], 0.3)}
                         {...props}
-                    >
-                    </TouchableRipple>
+                    />
                 ),
             }}>
             <Tab.Screen
@@ -52,7 +51,10 @@ export default function NavigationComponent() {
                 component={NewHome}
                 options={{
                     tabBarLabel: createTabBarLabel('Home'),
-                    tabBarIcon: createTabBarIcon('ri-home-4-line'),
+                    tabBarIcon: createTabBarIcon(
+                        'ri-home-4-line',
+                        'ri-home-4-fill',
+                    ),
                     headerShown: false,
                 }}
             />
@@ -61,7 +63,10 @@ export default function NavigationComponent() {
                 component={NewPackages}
                 options={{
                     tabBarLabel: createTabBarLabel('Packages'),
-                    tabBarIcon: createTabBarIcon('ri-video-line'),
+                    tabBarIcon: createTabBarIcon(
+                        'ri-play-circle-line',
+                        'ri-play-circle-fill',
+                    ),
                     headerShown: false,
                 }}
             />
@@ -70,7 +75,10 @@ export default function NavigationComponent() {
                 component={NewActivateKeys}
                 options={{
                     tabBarLabel: createTabBarLabel('Keys'),
-                    tabBarIcon: createTabBarIcon('ri-key-2-line'),
+                    tabBarIcon: createTabBarIcon(
+                        'ri-key-2-line',
+                        'ri-key-2-fill',
+                    ),
                     headerShown: false,
                 }}
             />
@@ -80,7 +88,10 @@ export default function NavigationComponent() {
                 component={NewProfile}
                 options={{
                     tabBarLabel: createTabBarLabel('Profile'),
-                    tabBarIcon: createTabBarIcon('account-circle-line'),
+                    tabBarIcon: createTabBarIcon(
+                        'account-circle-line',
+                        'account-circle-fill',
+                    ),
                     headerShown: false,
                 }}
             />

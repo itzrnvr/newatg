@@ -1,8 +1,8 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
+import {FlatList, View} from 'react-native';
 
-const HomeScreenList = ({ data }) => {
-    const renderSection = ({ item }) => {
+const HomeScreenList = ({data}) => {
+    const renderSection = ({item}) => {
         const SectionComponent = item.Component;
         if (!SectionComponent) return null;
 
