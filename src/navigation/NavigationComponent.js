@@ -5,39 +5,54 @@ import tailwindColorMap from 'utils/tailwindColors';
 import NewPackages from '../screens/NewPackages';
 import NewHome from '../screens/NewHome';
 import NewActivateKeys from '../screens/NewActivateKeys';
+import {Text, Touchable, TouchableOpacity, View} from 'react-native';
+import NewProfile from '../screens/NewProfile';
+import {TouchableRipple} from 'react-native-paper';
+import {hexToRGBA} from 'utils/misc';
 
 const Tab = createBottomTabNavigator();
 
 export default function NavigationComponent() {
+    const createTabBarLabel = labelText => {
+        return ({focused, color}) => {
+            return null;
+        };
+    };
+
+    const createTabBarIcon = iconName => {
+        return ({focused, color, size}) => (
+            <Icon
+                name={iconName}
+                size={focused ? 34 : 30} // You can adjust the size based on your design needs
+                color={focused ? color : tailwindColorMap.slate['500']}
+            />
+        );
+    };
+
     return (
         <Tab.Navigator
             screenOptions={{
-                tabBarActiveTintColor: 'white',
-                tabBarInactiveTintColor: '#3e2465',
+                tabBarActiveTintColor: tailwindColorMap.blue['500'],
+                tabBarInactiveTintColor: tailwindColorMap.black,
                 tabBarStyle: {
-                    borderBottomWidth: 1,
-                    backgroundColor: 'orange',
-                    borderTopLeftRadius: 25,
-                    borderTopRightRadius: 25,
-                    borderBottomEndRadius: 25,
-                    borderBottomLeftRadius: 25,
-                    borderColor: 'red',
-                    overflow: 'hidden',
-                    margin: 20,
+                    backgroundColor: 'white',
+                    height: 64,
                 },
+                tabBarButton: props => (
+                    <TouchableRipple
+                        className={'rounded-2xl'}
+                        rippleColor={hexToRGBA(tailwindColorMap.blue[300], 0.3)}
+                        {...props}
+                    >
+                    </TouchableRipple>
+                ),
             }}>
             <Tab.Screen
                 name="NewHome"
                 component={NewHome}
                 options={{
-                    tabBarLabel: 'Home',
-                    tabBarIcon: ({color, size}) => (
-                        <Icon
-                            name={'ri-home-4-line'}
-                            size={size}
-                            color={color}
-                        />
-                    ),
+                    tabBarLabel: createTabBarLabel('Home'),
+                    tabBarIcon: createTabBarIcon('ri-home-4-line'),
                     headerShown: false,
                 }}
             />
@@ -45,30 +60,27 @@ export default function NavigationComponent() {
                 name="Packages"
                 component={NewPackages}
                 options={{
-                    tabBarLabel: 'Packages',
-                    tabBarIcon: ({color, size}) => (
-                        <Icon
-                            name={'ri-video-line'}
-                            size={size}
-                            color={color}
-                        />
-                    ),
+                    tabBarLabel: createTabBarLabel('Packages'),
+                    tabBarIcon: createTabBarIcon('ri-video-line'),
+                    headerShown: false,
+                }}
+            />
+            <Tab.Screen
+                name="NewActivateKeys"
+                component={NewActivateKeys}
+                options={{
+                    tabBarLabel: createTabBarLabel('Keys'),
+                    tabBarIcon: createTabBarIcon('ri-key-2-line'),
                     headerShown: false,
                 }}
             />
 
             <Tab.Screen
-                name="NewActivateKeys"
-                component={NewActivateKeys}
+                name="NewProfile"
+                component={NewProfile}
                 options={{
-                    tabBarLabel: 'Activate Keys',
-                    tabBarIcon: ({color, size}) => (
-                        <Icon
-                            name={'ri-key-2-line'}
-                            size={size}
-                            color={color}
-                        />
-                    ),
+                    tabBarLabel: createTabBarLabel('Profile'),
+                    tabBarIcon: createTabBarIcon('account-circle-line'),
                     headerShown: false,
                 }}
             />
