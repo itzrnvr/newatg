@@ -113,7 +113,7 @@ const App = () => {
                     <Stack.Screen
                         name="MyPackages"
                         component={MyPackages}
-                        options={{title: 'My Packages'}}
+                        options={{title: 'My Actions'}}
                     />
                     <Stack.Screen
                         name="MyVideos"

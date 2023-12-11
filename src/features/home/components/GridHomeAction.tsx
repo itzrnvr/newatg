@@ -20,7 +20,7 @@ const gutterSize = 8; // the gap between item
 const data: GridHomeActionItem[] = [
     {
         id: 0,
-        key: 'My Packages',
+        key: 'My Actions',
         asset: require(`../../../assets/newVideoIcon.png`),
         uri: null,
         screen: 'MyPackages',

@@ -34,7 +34,7 @@ const CarouselItem = ({item}) => {
 
 const CarouselYoutube = ({data = []}) => {
     return (
-        <View className={'px-3 mt-8 h-[300px]'} style={styles.mainContainer}>
+        <View className={'px-3 mt-8 mb-4 h-[300px]'} style={styles.mainContainer}>
             <View className={'mb-2 flex-row items-center'}>
                 <Icon name="youtube-fill" size="38" color="red" />
                 <Text
@@ -60,6 +60,8 @@ const CarouselYoutube = ({data = []}) => {
                 lockScrollWhileSnapping={true}
                 enableMomentum={false}
                 decelerationRate={0.25}
+                loop={true}
+                enableSnap={true}
             />
         </View>
     );

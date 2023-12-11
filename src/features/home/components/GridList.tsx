@@ -32,7 +32,7 @@ interface Item {
 const items: Item[] = [
     {
         key: '1',
-        title: 'Video Packages',
+        title: 'Video Actions',
         description: 'purple',
         iconName: 'ri-video-line',
         colorName: 'purple',

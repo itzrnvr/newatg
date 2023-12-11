@@ -18,7 +18,7 @@ const itemWidth = (width - 3 * gap) / 2;
 const items = [
     {
         key: '1',
-        title: 'Video Packages',
+        title: 'Video Actions',
         description: 'purple',
         iconName: 'ri-video-line',
         colorName: 'purple',
@@ -54,7 +54,7 @@ const items = [
     },
 ];
 
-const Packages = ({data}) => {
+const Actions = ({data}) => {
     // renderItem function
     const navigation = useNavigation();
     const {scrolling} = useHomeInteractiveEventsStore();
@@ -118,7 +118,7 @@ const Packages = ({data}) => {
     };
 
     return (
-        <View className={'bg-blue-500 py-8  w-full justify-center items-center'}>
+        <View className={'bg-blue-900 py-8  w-full justify-center items-center'}>
             <FlatList
                 data={items}
                 renderItem={renderItem}
@@ -133,4 +133,4 @@ const Packages = ({data}) => {
     );
 };
 
-export default Packages;
+export default Actions;

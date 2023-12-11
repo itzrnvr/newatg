@@ -21,7 +21,7 @@ const BottomTabNavigator = () => {
             <Tab.Screen
                 name="MyPackages"
                 component={MyPackages}
-                options={{title: 'My Packages'}}
+                options={{title: 'My Actions'}}
             />
             <Tab.Screen
                 name="MyVideos"
