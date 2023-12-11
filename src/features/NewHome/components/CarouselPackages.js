@@ -4,7 +4,8 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import SnapCarousel from 'react-native-snap-carousel';
 import {useHomeInteractiveEventsStore} from '../../home/store/homeInteractiveEventsStore';
 import {getColorFromImage} from 'react-native-palette';
-import tailwindColorMap from "utils/tailwindColors";
+import tailwindColorMap from 'utils/tailwindColors';
+import {TouchableRipple} from 'react-native-paper';
 
 const {width} = Dimensions.get('window');
 const SLIDER_WIDTH = width;
@@ -18,13 +19,13 @@ const CarouselItem = ({item}) => {
     }, []);
 
     return (
-        <TouchableNativeFeedback
+        <TouchableRipple
             disabled={scrolling}
             onPress={() => Linking.openURL(item.url)}>
             <View style={styles.item}>
                 <Image style={styles.image} source={{uri: item.thumbnailUrl}} />
             </View>
-        </TouchableNativeFeedback>
+        </TouchableRipple>
     );
 };
 

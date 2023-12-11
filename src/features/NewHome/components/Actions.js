@@ -6,7 +6,8 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import {hexToRGBA} from 'utils/misc';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {StackParamList} from '../../../../App';
-import {useHomeInteractiveEventsStore} from "../../home/store/homeInteractiveEventsStore";
+import {useHomeInteractiveEventsStore} from '../../home/store/homeInteractiveEventsStore';
+import {TouchableRipple} from 'react-native-paper';
 
 const {width} = Dimensions.get('window');
 
@@ -75,50 +76,52 @@ const Actions = ({data}) => {
         };
 
         return (
-            <TouchableNativeFeedback
+            <TouchableRipple
                 disabled={scrolling}
                 onPress={() => handleItemClick(item)}
-                background={TouchableNativeFeedback.Ripple(
-                    rippleColor,
-                    rippleOverflow,
-                )}
+                rippleColor={rippleColor}
                 style={{width: itemWidth}}
-                className="bg-white rounded-lg border-slate-600 border m-2 p-4">
-                <View className={'flex-row'}>
-                    <View
-                        style={{backgroundColor: iconBackgroundColor}}
-                        className={`p-3 self-start rounded-lg`}>
-                        <Icon
-                            name={item.iconName}
-                            size={36}
-                            color={iconColor}
-                        />
+                className={
+                    'bg-white rounded-lg border-slate-600 border m-2 p-4'
+                }>
+                <View>
+                    <View className={'flex-row'}>
+                        <View
+                            style={{backgroundColor: iconBackgroundColor}}
+                            className={`p-3 self-start rounded-lg`}>
+                            <Icon
+                                name={item.iconName}
+                                size={36}
+                                color={iconColor}
+                            />
+                        </View>
+                        <View className={'absolute right-0'}>
+                            <Icon
+                                name={'ri-arrow-right-line'}
+                                size={34}
+                                color={iconColor}
+                            />
+                        </View>
                     </View>
-                    <View className={'absolute right-0'}>
-                        <Icon
-                            name={'ri-arrow-right-line'}
-                            size={34}
-                            color={iconColor}
-                        />
-                    </View>
-                </View>
-                <Text
-                    style={{fontFamily: 'RobotoSlab-SemiBold'}}
-                    className={'text-zinc-500 mt-4 text-[16px] w-28'}>
-                    {item.title}
-                </Text>
+                    <Text
+                        style={{fontFamily: 'RobotoSlab-SemiBold'}}
+                        className={'text-zinc-500 mt-4 text-[16px] w-28'}>
+                        {item.title}
+                    </Text>
 
-                <Text
-                    style={{fontFamily: 'Lato-Regular'}}
-                    className={'mt-1 text-zinc-500 text-md'}>
-                    Access all your activated packages here.
-                </Text>
-            </TouchableNativeFeedback>
+                    <Text
+                        style={{fontFamily: 'Lato-Regular'}}
+                        className={'mt-1 text-zinc-500 text-md'}>
+                        Access all your activated packages here.
+                    </Text>
+                </View>
+            </TouchableRipple>
         );
     };
 
     return (
-        <View className={'bg-blue-900 py-8  w-full justify-center items-center'}>
+        <View
+            className={'bg-blue-900 py-8  w-full justify-center items-center'}>
             <FlatList
                 data={items}
                 renderItem={renderItem}

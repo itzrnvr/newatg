@@ -29,6 +29,7 @@ const Index = () => {
             Component: ListHorizontalPackages,
         },
         {type: 'Footer', data: null, Component: Footer},
+
     ];
 
     return (

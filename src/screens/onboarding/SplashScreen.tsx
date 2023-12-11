@@ -16,7 +16,7 @@ const SplashScreen: React.FC<SplashScreenProp> = ({navigation}) => {
             navigation.navigate('NavigationComponent');
         } else {
             storage.set('firstStart', true);
-            navigation.navigate('OnBoarding');
+            navigation.navigate('NavigationComponent');
         }
     };
 

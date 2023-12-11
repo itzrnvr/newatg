@@ -4,6 +4,7 @@ import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 import SnapCarousel, {Pagination} from 'react-native-snap-carousel';
 import Icon from 'react-native-remix-icon';
 import {useHomeInteractiveEventsStore} from '../../home/store/homeInteractiveEventsStore';
+import {TouchableRipple} from 'react-native-paper';
 
 const {width, height} = Dimensions.get('window');
 
@@ -11,7 +12,7 @@ const CarouselItem = ({item}) => {
     const {scrolling} = useHomeInteractiveEventsStore();
 
     return (
-        <TouchableNativeFeedback
+        <TouchableRipple
             disabled={scrolling}
             onPress={() => Linking.openURL(item.video_ytube_link)}>
             <View className={'items-center'}>
@@ -28,13 +29,15 @@ const CarouselItem = ({item}) => {
                     {item.video_title}
                 </Text>
             </View>
-        </TouchableNativeFeedback>
+        </TouchableRipple>
     );
 };
 
 const CarouselYoutube = ({data = []}) => {
     return (
-        <View className={'px-3 mt-8 mb-4 h-[300px]'} style={styles.mainContainer}>
+        <View
+            className={'px-3 mt-8 mb-4 h-[300px]'}
+            style={styles.mainContainer}>
             <View className={'mb-2 flex-row items-center'}>
                 <Icon name="youtube-fill" size="38" color="red" />
                 <Text
